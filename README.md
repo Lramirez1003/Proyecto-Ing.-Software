@@ -1,3 +1,10 @@
+Descargar este folder que no deja hacer push: https://mega.nz/file/bccXhCAa#2U5znkX6dJ0WpriDy25jiK4u6-axSOedYBRIPZ3_0a4
+
+Hacer paso 3 de este link para que puedan probar: https://medium.com/@has.raymondwong/install-and-run-laravel-on-windows-wamp-server-fc9ce604cd50
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
