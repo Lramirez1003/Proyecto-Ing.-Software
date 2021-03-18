@@ -1,0 +1,128 @@
+
+
+
+#Clientesregistrados{
+    position: absolute;
+    width: 306px;
+    height: 36px;
+    left: 567px;
+    top: 118px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #333333;
+}
+
+#lineamamei{
+    position: absolute;
+    width: 296.04px;
+    height: 0px;
+    left: 571px;
+    top: 188px;
+
+    border: 2px solid #FFA751;
+}
+
+.Cliente1{
+    position: absolute;
+    width: 529px;
+    height: 104px;
+    left: 456px;
+    top: 228px;
+
+    background: rgba(196, 196, 196, 0.15);
+    border-radius: 10px;
+}
+
+.NombreCliente{
+    position: absolute;
+    height: 27px;
+    width: 134px;
+    left: 139px;
+    top: 38px;
+
+
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.FotoCliente{
+    position: absolute;
+    height: 61px;
+    width: 61px;
+    left: 41px;
+    top: 21px;
+    border-radius: 0px;
+
+
+
+}
+
+
+
+
+
+
+
+
+/*NAV BAR*/
+
+* { box-sizing:border-box; }
+.administrarvLOGO{
+    flex:1 1 auto;
+}
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+
+
+}
+.administrarv{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+
+}
+
+
+.administrarv:hover{
+    background: gold;
+    border-radius: 5px;
+}
+.circulop {
+
+    width: 53px;
+    height: 53px;
+    left: 1425px;
+    top: 8px;
+    display: inline;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: auto;
+    /*border: 2px solid #FFA751;*/
+    background: url("../admin 1.png");
+    border-radius: 500px;
+
+}
+
+

@@ -1,0 +1,509 @@
+* { box-sizing:border-box; }
+
+/*CALENDARIO begin*/
+#rectangulo1{
+    position: absolute;
+    width: 504px;
+    height: 249px;
+    left: 206px;
+    top: 284px;
+
+    background: rgba(255, 167, 81, 0.05);
+    border-radius: 15px;
+
+}
+
+#texto1{
+    position: absolute;
+    width: 107px;
+    height: 24px;
+    left: 202px;
+    top: 17px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #464646;
+}
+
+#linea8{
+    position: absolute;
+    width: 104px;
+    height: 0px;
+    left: 200px;
+    top: 54px;
+
+    border: 2px solid #FFA751;
+}
+
+
+#subtexto1{
+
+    position: absolute;
+    width: 237px;
+    height: 18px;
+    left: 143px;
+    top: 67px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #464646;
+}
+
+/*------------------------------*/
+
+
+
+/*MENSAJES begin*/
+#rectangulo2{
+    position: absolute;
+    width: 504px;
+    height: 249px;
+    left: 730px;
+    top: 284px;
+
+    background: rgba(255, 167, 81, 0.05);
+    border-radius: 15px;
+}
+
+#texto2{
+    position: absolute;
+    width: 95px;
+    height: 24px;
+    left: 202px;
+    top: 20px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #464646;
+}
+
+#linea9{
+    position: absolute;
+    width: 104px;
+    height: 0px;
+    left: 197px;
+    top: 53px;
+
+    border: 2px solid #FFA751;
+}
+
+#subtexto2{
+
+    position: absolute;
+    width: 281px;
+    height: 18px;
+    left: 112px;
+    top: 65px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #464646;
+
+}
+/*----------------------*/
+
+
+/*ADMINISTRAR VEHICULOS begin*/
+
+#rectangulo3{
+
+    position: absolute;
+    width: 504px;
+    height: 249px;
+    left: 206px;
+    top: 565px;
+
+    background: rgba(255, 167, 81, 0.05);
+    border-radius: 15px;
+}
+#texto3{
+    position: absolute;
+    width: 215px;
+    height: 24px;
+    left: 150px;
+    top: 19px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #464646;
+}
+
+#linea10{
+
+    position: absolute;
+    width: 222px;
+    height: 0px;
+    left: 150px;
+    top: 53.5px;
+
+    border: 2px solid #FFA751;
+}
+
+#subtexto3{
+    position: absolute;
+    width: 237px;
+    height: 18px;
+    left: 143px;
+    top: 72px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #464646;
+}
+
+#administraricono{
+    position: absolute;
+    width: 52px;
+    height: 27.13px;
+    left: 231px;
+    top: 132px;
+
+}
+/*----------------------*/
+
+
+/*RENTAS ACTIVAS begin*/
+#rectangulo4{
+
+    position: absolute;
+    width: 504px;
+    height: 249px;
+    left: 730px;
+    top: 565px;
+
+    background: rgba(255, 167, 81, 0.05);
+    border-radius: 15px;
+}
+#texto4{
+
+    position: absolute;
+    width: 219px;
+    height: 24px;
+    left: 143px;
+    top: 18px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #464646;
+}
+
+#linea11{
+    position: absolute;
+    width: 222px;
+    height: 0px;
+    left: 141px;
+    top: 54px;
+
+    border: 2px solid #FFA751;
+}
+
+#subtexto4{
+
+    position: absolute;
+    width: 288px;
+    height: 18px;
+    left: 120px;
+    top: 73px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #464646;
+}
+
+#caricono{
+    position: absolute;
+    width: 34.67px;
+    height: 52px;
+    left: 232px;
+    top: 122px;
+
+}
+
+/*----------------*/
+#hola {
+    position: absolute;
+    width: 232px;
+    height: 48px;
+    left: 209px;
+    top: 114px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFA751;
+}
+p{
+    position: absolute;
+    width: 998px;
+    height: 24px;
+    left: 209px;
+    top: 187px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #464646;
+}
+
+
+.circulop {
+
+    width: 53px;
+    height: 53px;
+    left: 1425px;
+    top: 8px;
+    display: inline;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: auto;
+    /*border: 2px solid #FFA751;*/
+    background: url("../admin 1.png");
+    border-radius: 500px;
+
+}
+body {
+    font-family: 'Inter',sans-serif;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+hgroup {
+    text-align:center;
+    margin-top: 4em;
+}
+
+h1{  font-weight: 700;
+    font-family: 'Inter', sans-serif; }
+
+h3{
+    font-weight: 300;
+}
+
+.header3{
+    color: #242323;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+.header3:hover{
+    text-decoration: underline;
+}
+
+
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input:focus { outline: none; }
+
+
+/* Label */
+
+label {
+    color: rgb(53, 52, 52);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: all 0.2s ease;
+
+}
+
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+    top: -20px;
+    transform: scale(.75); left: -2px;
+    /* font-size: 14px; */
+    color: black;
+}
+
+
+
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    margin: .3em 0 1em 0;
+    width: 100%;
+    vertical-align: middle;
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid gold;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.button:focus { outline: 0; }
+
+
+/* Button modifiers */
+
+.buttonGold {
+    background: gold;
+    /*text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);*/
+}
+
+.buttonGold:hover { background: #fffb0000; }
+
+p{	text-align: center;}
+.abuenogracias{
+    text-decoration:double;
+    color: black;
+    font-weight: bold;
+}
+.abuenogracias:hover{
+    text-decoration: underline;
+}
+
+/* Ripples container */
+
+.ripples {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+
+/* Ripples circle */
+
+.ripplesCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+    animation: ripples .4s ease-in;
+}
+
+
+/* Ripples animation */
+
+@keyframes ripples {
+    0% { opacity: 0; }
+
+    25% { opacity: 1; }
+
+    100% {
+        width: 200%;
+        padding-bottom: 200%;
+        opacity: 0;
+    }
+}
+
+/* Header */
+.administrarvLOGO{
+    flex:1 1 auto;
+}
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+
+
+}
+.administrarv{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+
+}
+.nav-registro{
+    display: inline-block;
+    color:black;
+    background: gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.administrarv:hover{
+    background: gold;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(161, 119, 12);
+    color: white;
+    text-align: center;
+}

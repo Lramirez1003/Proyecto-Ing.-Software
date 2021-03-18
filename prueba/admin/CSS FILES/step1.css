@@ -1,0 +1,231 @@
+
+
+
+/*  Clases  */
+.rectanguloseleccionado{
+    background-color: #ffffff;
+    position: absolute;
+    width: 345px;
+    height: 221px;
+    left: 0px;
+    top: 100px;
+
+    border: 3px solid #FFEF3E;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+.rectanguloNOseleccionado{
+    position: absolute;
+    width: 345px;
+    height: 221px;
+    left: 390px;
+    top: 100px;
+    background-color: #eeeeee;
+    border: 3px solid #eeeeee;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.circuloJEVI{
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    left: 143px;
+    top: 24px;
+    border-radius: 500px;
+
+
+    background: #FFEF3E;
+
+}
+.numero{
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    left: 168px;
+    top: 42px;
+
+
+
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    color: #333333;
+}
+.tituloo{
+    position: absolute;
+    width: 65px;
+    height: 22px;
+    left: 140px;
+    top: 95px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #333333;
+}
+
+
+.fechabox{
+    position: absolute;
+    width: 208px;
+    height: 45px;
+    left: 51px;
+    top: 65px;
+}
+
+
+/*Paso Fechas */
+#barramarilla2{
+    position: absolute;
+    width: 119px;
+    height: 64px;
+    left: 184px;
+    top: 138px;
+
+    background: rgba(255, 239, 62, 0.2);
+    border-radius: 5px;
+}
+#barramarilla{
+    position: absolute;
+    width: 119px;
+    height: 64px;
+    left: 34px;
+    top: 138px;
+
+    background: rgba(255, 239, 62, 0.2);
+    border-radius: 5px;
+}
+#escoge{
+    position: absolute;
+    width: 432px;
+    height: 36px;
+    left: 550px;
+    top: 350px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+
+    color: #333333;
+
+}
+
+
+
+/*Fechas Frame*/
+
+#fechaframe{
+
+    position: absolute;
+    width: 590px;
+    height: 250px;
+    left: 480px;
+    top: 450px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px 1px rgba(196, 196, 196, 0.5);
+    border-radius: 5px;
+
+}
+
+
+#seleccionar{
+    position: absolute;
+    width: 482px;
+    height: 42px;
+    left: 51px;
+    top: 155px;
+
+    border: 3px solid #FFEF3E;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    background: #FFEF3E;
+    border-radius: 5px;
+}
+
+.desdehasta{
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    left: 51px;
+    top: 8px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+}
+/*NAV BAR CLIENTE*/
+
+* { box-sizing:border-box; }
+.administrarvLOGO{
+    flex:1 1 auto;
+}
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: #d7d7d7;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+
+
+}
+.administrarv{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+
+}
+
+
+.administrarv:hover{
+    background: #d4d4d4;
+    border-radius: 5px;
+}
+.circulop {
+
+    width: 53px;
+    height: 53px;
+    left: 1425px;
+    top: 8px;
+    display: inline;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: auto;
+    /*border: 2px solid #FFA751;*/
+    background: url("../admin 1.png");
+    border-radius: 500px;
+
+}
+body {
+    font-family: 'Inter',sans-serif;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}

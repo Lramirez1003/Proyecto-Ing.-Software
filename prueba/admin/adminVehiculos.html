@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS FILES/adminVehiculos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript"src='JS/adminVehiculos.js'></script>
+
+    
+    <title>Ureña Rent-Car</title>
+</head>
+<header>
+    <nav>
+        <a href="#" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
+
+        <a href="#" class = "administrarv ">Administrar Vehiculos</a>
+
+        <a href="#" class = "administrarv ">Rentas</a>
+
+        <a href="#" class = "administrarv ">Calendario</a>
+
+        <a href="#" class = "administrarv ">Mensajes</a>
+
+        <a href="clientesregistrados.html" class = "circulop" ></a>
+
+</nav>
+</header>
+
+<body style="background-color: white;">
+    <h1>Tus vehiculos</h1>
+    <div id="linea1"></div>
+    <button class="btn-popup" onclick="openForm()">
+        <img src="images/addicon.png" style="position: absolute;
+width: 31px;
+height: 31px;
+left: 25px;
+top: 15px;">
+        <h4 style="position: absolute;
+left: 80px;
+top: 0px;">Agregar Vehiculos</h4>
+    </button>
+    <!--    FORMULARIO PARA AGREGAR VEHICULOS        -->
+    <div id="myForm">
+    <form action="" method="post">
+        
+        <div id="fotoVehiculo" > 
+            <p><img id="blah" src="images/insert_photo.svg" alt=" " /></p>
+            <input id="inputArchivo" type="file"  id="btn-file" hidden onchange="readURL(this)"  />
+            <label >Inserte imagen del vehiculo </label>
+        </div>
+
+        <h2>Agregando vehiculo...</h2>
+        <div id="nombreVehiculo" class="group">
+            <input class="inputTexto" type="text"><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Vehiculo</label>
+        </div>
+        
+        <div class="group">
+            <input class="inputTexto" type="text" ><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Precio por dia:</label>
+        </div>
+        <div class="group">
+            
+            <select class="inputTexto" name="tipoCarro" id="tipoCarro"> <span class="highlight"></span><span class="bar"></span>
+                <option hidden>Elija el tipo de carro</option>
+                <option value="Compacto">Compacto</option>
+                <option value="Jeepeta">Jeepeta</option>
+            </select>
+            
+        </div>
+
+        <div id="numeroPasajeros" class="group">
+        <input class="inputTexto" type="number" min="1" max = "6"><span class="highlight"></span><span class="bar"></span>
+        <label for="cantidad" class="labelTexto">Pasajeros</label>
+        </div>
+        <h4>Selecciona que mas posee el vehiculo</h4>
+         <div id="extras" class="group">
+            <input type="checkbox" name="favorite1" value="Aire Acondicionado" /> <i class="material-icons">
+                air</i> Aire Acondicionado
+            <input type="checkbox" name="favorite2" value="Bluetooth" /> <i class="material-icons">
+                bluetooth </i>  Bluetooth
+            <input type="checkbox" name="favorite3" value="Radio F/M" /> <i class="material-icons">
+                radio</i>  Radio F/M
+
+         </div>
+         <button type="reset" value="reset" class="button" style="color: orange;border: 2px solid;
+         border-radius: 5px;" onclick="closeForm()" >Cancelar
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+         </button>
+         <button type="submit" value="submit" class="button" style="margin-left: 50%;background-color: rgba(255, 167, 81, 1);border-radius: 5px;">Agregar
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+         </button>
+
+    </form>   
+</div>
+
+    <button class="btn-popup" onclick="openForm()" style="position: absolute;
+width: 257px;
+height: 64px;
+left: 1000px;
+">
+        <img src="images/estadisticasicono.png" style="position: absolute;
+width: 26px;
+height: 26px;
+left:35px;
+top: 15px;">
+        <h4 style="position: absolute;
+left: 80px;
+top: 0px;">Ver estadisticas</h4>
+    </button> 
+<table id="t01"  >     <!-- PODEMOS QUITAR ESTO? O TIENE QUE IR?-->   <!-- TIENE QUE IR, ES EL TAG O LLAMADO DE LA TABLA. ATT: Luis -->  
+    <tr>                
+      <th>Foto</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Precio/hora</th>
+      <th>N. pasajeros</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td height=100 width=100><img src="/images/eframe_4.png" alt=""></td>
+      <td>Hyunday Elantra</td>
+      <td>Compacto</td>
+      <td>150$</td>
+      <td>4</td>
+      <td>
+        <a href="#" class = "btn-editar " > Editar </a> <br><br>
+        <a href="#" class = "btn-borrar "> Borrar </a>
+      </td>
+    </tr>
+
+    <tr>
+        <td height=100 width=100><img src="/images/erectangle_24.png" alt=""></td>
+        <td>Volkswagen</td>
+        <td>Jeepeta</td>
+        <td>250$</td>
+        <td>4</td>
+        <td>
+          <a href="#" class = "btn-editar " > Editar </a> <br><br>
+          <a href="#" class = "btn-borrar "> Borrar </a>
+        </td>
+      </tr>
+
+      
+  </table>
+
+</body>
+</html>

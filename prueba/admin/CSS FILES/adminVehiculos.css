@@ -1,0 +1,385 @@
+
+/* Header */
+
+.administrarvLOGO{
+    flex:1 1 auto;
+}
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+
+
+}
+.administrarv{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+
+}
+.nav-registro{
+    display: inline-block;
+    color:black;
+    background: gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.administrarv:hover{
+    background: gold;
+    border-radius: 5px;
+}
+
+.circulop {        /*TUVE QUE AGEGAR ESTO AQUI PA QUE SALIERA LA FOTO DEL ADMIN*/
+
+    width: 53px;
+    height: 53px;
+    left: 1425px;
+    top: 8px;
+    display: inline;
+    padding: 0px 0px;
+    text-decoration: none;
+    margin: auto;
+    /*border: 2px solid #FFA751;*/
+    background: url("../admin 1.png");
+    border-radius: 500px;
+
+}
+/*------------------- BODY -------------------------*/
+h1{
+    position: absolute;
+    height: 36px;
+    left: 381px;
+    top: 140px;
+}
+#myForm{
+  display: none;
+}
+.btn-popup{
+  
+  color:#333333;
+  border-radius: 5px;
+  
+  background-color: rgba(255, 167, 81, 0.1);
+  padding: 10px 1px;
+  border: 2px solid rgba(255, 168, 81, 0.034);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+    width: 257px;
+    height: 64px;
+
+  position: absolute;
+  left: 681px;
+  top: 150px;
+}
+i {
+  font-size: 24px !important;
+  vertical-align:middle;
+}
+
+#linea1{
+  position: absolute;
+  width: 209px;
+  height: 0px;
+  left: 384px;
+  top: 205px;
+  border: 2px solid #FFA751;
+}
+
+/*------------ FORMULARIO ------------------ */
+#nombreVehiculo{
+    margin-right: 65%;
+}
+#numeroPasajeros{
+    margin-right: 88%;
+}
+
+#fotoVehiculo{
+    position: absolute;
+    margin-left: 30%;
+}
+
+img{
+    max-width:180px;
+  }
+.group { 
+	position: relative; 
+    margin-right: 80%;
+	margin-bottom: 45px; 
+}
+
+body {
+	font-family: 'Inter',sans-serif;
+	background: #eee;
+  -webkit-font-smoothing: antialiased;
+}
+
+form {
+	width: 1043px;
+	margin: 158px auto;
+  border-radius: 5px;
+	padding: 3em 2em 2em 2em;
+	background:rgba(255, 255, 255, 1);
+    /*#fffb004f*/
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+	/*box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/
+}
+
+.inputTexto{
+    font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	background: #f3f17b00;
+	color: #242323;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
+}
+#inputArchivo{
+    font-size: 13px;
+	padding: 10px 10px 10px 5px;
+	display: block;	 
+}
+label {
+    background-color: rgba(76, 0, 130, 0);
+    color: black;
+    cursor: pointer;
+
+  }
+
+
+input:focus { outline: none; }
+
+
+/* Label */
+.labelTexto{
+    color: rgb(53, 52, 52); 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+
+
+
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: black;
+}
+
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: gold; 
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    margin: .3em 0 1em 0;
+    width: 20%;
+    vertical-align: middle;
+    color: black;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .button:focus { outline: 0; }
+
+
+/* active */
+
+input:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+	from { background: black; }
+	to 	{ width: 0; background: transparent; }
+}
+
+.ripples {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  
+  /* Ripples circle */
+  
+  .ripplesCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(238, 223, 14, 0.253);
+  }
+  
+  .ripples.is-active .ripplesCircle {
+    animation: ripples .4s ease-in;
+  }
+  
+  
+  /* Ripples animation */
+  
+  @keyframes ripples {
+    0% { opacity: 0; }
+  
+    25% { opacity: 1; }
+  
+    100% {
+      width: 200%;
+      padding-bottom: 200%;
+      opacity: 0;
+    }
+  }
+/* AAA */
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+/* -----------------MULTIPLE----- */
+
+#extras{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+/**/
+#buttonReset{
+    display: inline-block;
+    color:black;
+    border: 2px solid orange;
+    background: white;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --------------------- TABLA DE VEHICULOS ------------------ */
+
+#t01{
+  position: relative;
+  left : 381px;
+  top: 150px;
+  width: 60%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#t01 td, #t01 th {
+  border: 1px solid rgba(255, 168, 81, 0.301);
+  padding: 8px;
+}
+
+#t01 tr:nth-child(even){background-color: #f2f2f2;}
+
+#t01 tr:hover {background-color: #ddd;}
+
+#t01 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(255, 168, 81, 0.301);
+  color: black;
+}
+
+.btn-editar{
+  color:white;
+  border: 2px solid rgb(12, 160, 12);
+  border-radius: 2px;
+  background: rgb(12, 160, 12);
+  text-decoration: none;
+
+}
+
+.btn-borrar{
+  color:white;
+  border: 2px solid rgb(255, 4, 4);
+  border-radius: 2px;
+  background: rgb(255, 4, 4);
+  text-decoration: none;
+}

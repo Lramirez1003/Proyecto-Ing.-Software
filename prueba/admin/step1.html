@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS%20FILES/step1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+</head>
+<header>
+    <nav>
+
+        <a href="#" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
+
+        <a href="#" class = "administrarv " >Explorar
+            <!--<i class="material-icons">person</i>-->
+            <img src="images/exploraricon.png" width="15px" height="14px">
+        </a>
+
+        <a href="#" class = "administrarv " >Rentar
+            <!--<i class="material-icons">person</i>-->
+            <img src="images/iconocar.png" width="11.45px" height="14px">
+        </a>
+
+        <a href="#" class = "administrarv ">Aprender
+            <img src="images/iconoaprender.png" width="13px" height="14px">
+        </a>
+
+        <a href="#" class = "administrarv ">Mensajes
+            <img src="images/iconomensajes.png" width="15px" height="14px">
+        </a>
+
+        <a href="#" class = "circulop" ></a>
+
+    </nav>
+</header>
+<body>
+
+    <a class="rectanguloseleccionado">
+        <div class="circuloJEVI"></div>
+        <div class="numero">1</div>
+        <div class="tituloo">Fechas</div>
+        <div id="barramarilla"></div>
+        <div id="barramarilla2"></div>
+    </a>
+
+    <a href="step2.html" class="rectanguloNOseleccionado">
+        <div class="circuloJEVI"></div>
+        <div class="numero">2</div>
+        <div class="tituloo" style="left: 136px">Vehiculo </div>
+    </a>
+
+    <a class="rectanguloNOseleccionado" style="left: 780px">
+        <div class="circuloJEVI"></div>
+        <div class="numero">3</div>
+        <div class="tituloo" style="left: 150px">Pago</div>
+    </a>
+
+    <a class="rectanguloNOseleccionado" style="left: 1170px">
+        <div class="circuloJEVI"></div>
+        <div class="numero">4</div>
+        <div class="tituloo" style="left: 142px">Factura</div>
+    </a>
+
+    <h2 id="escoge">Escoge una fecha que desees</h2>
+
+    <div id="fechaframe">
+        <h4 class="desdehasta">Desde</h4>
+        <h4 class="desdehasta" style="left: 330px">Hasta</h4>
+        <input type="date" class="fechabox"
+               value="2021-03-7"
+               min="2021-01-01" max="2021-12-31">
+        <input type="date" class="fechabox" style="left: 328px"
+               value="2021-03-7"
+               min="2021-01-01" max="2021-12-31">
+        <button id="seleccionar">Seleccionar</button>
+    </div>
+
+
+</body>
+</html>
