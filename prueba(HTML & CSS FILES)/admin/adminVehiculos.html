@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='JS/adminVehiculos.js'></script>
 
-    
+
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -47,8 +47,8 @@ top: 0px;">Agregar Vehiculos</h4>
     <!--    FORMULARIO PARA AGREGAR VEHICULOS        -->
     <div id="myForm">
     <form action="" method="post">
-        
-        <div id="fotoVehiculo" > 
+
+        <div id="fotoVehiculo" >
             <p><img id="blah" src="images/insert_photo.svg" alt=" " /></p>
             <input id="inputArchivo" type="file"  id="btn-file" hidden onchange="readURL(this)"  />
             <label >Inserte imagen del vehiculo </label>
@@ -59,19 +59,19 @@ top: 0px;">Agregar Vehiculos</h4>
             <input class="inputTexto" type="text"><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Vehiculo</label>
         </div>
-        
+
         <div class="group">
             <input class="inputTexto" type="text" ><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Precio por dia:</label>
         </div>
         <div class="group">
-            
+
             <select class="inputTexto" name="tipoCarro" id="tipoCarro"> <span class="highlight"></span><span class="bar"></span>
                 <option hidden>Elija el tipo de carro</option>
                 <option value="Compacto">Compacto</option>
                 <option value="Jeepeta">Jeepeta</option>
             </select>
-            
+
         </div>
 
         <div id="numeroPasajeros" class="group">
@@ -96,7 +96,7 @@ top: 0px;">Agregar Vehiculos</h4>
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
          </button>
 
-    </form>   
+    </form>
 </div>
 
     <button class="btn-popup" onclick="openForm()" style="position: absolute;
@@ -112,9 +112,9 @@ top: 15px;">
         <h4 style="position: absolute;
 left: 80px;
 top: 0px;">Ver estadisticas</h4>
-    </button> 
-<table id="t01"  >     <!-- PODEMOS QUITAR ESTO? O TIENE QUE IR?-->   <!-- TIENE QUE IR, ES EL TAG O LLAMADO DE LA TABLA. ATT: Luis -->  
-    <tr>                
+    </button>
+<table id="t01"  >     <!-- PODEMOS QUITAR ESTO? O TIENE QUE IR?-->   <!-- TIENE QUE IR, ES EL TAG O LLAMADO DE LA TABLA. ATT: Luis -->
+    <tr>
       <th>Foto</th>
       <th>Nombre</th>
       <th>Tipo</th>
@@ -129,8 +129,15 @@ top: 0px;">Ver estadisticas</h4>
       <td>150$</td>
       <td>4</td>
       <td>
-        <a href="#" class = "btn-editar " > Editar </a> <br><br>
+        <a href="#" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
         <a href="#" class = "btn-borrar "> Borrar </a>
+          <script >$(document).ready(function() {
+              <!-- J QUERY BUSCAR -->
+              $("#Edtar-btn").click(function() {
+                  //Do stuff when clicked
+                  alert("klk");
+              });
+          });</script>
       </td>
     </tr>
 
@@ -146,7 +153,7 @@ top: 0px;">Ver estadisticas</h4>
         </td>
       </tr>
 
-      
+
   </table>
 
 </body>
