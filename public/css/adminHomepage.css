@@ -57,6 +57,13 @@
     color: #464646;
 }
 
+#calendaricono{
+    position: absolute;
+    width: 39.6px;
+    height: 44px;
+    left: 231px;
+    top: 132px;;
+}
 /*------------------------------*/
 
 
@@ -115,6 +122,14 @@
 
     color: #464646;
 
+}
+
+#mensajesicono{
+    position: absolute;
+    width: 38.35px;
+    height: 38.43px;
+    left: 232px;
+    top: 122px;
 }
 /*----------------------*/
 

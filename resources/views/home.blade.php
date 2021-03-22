@@ -1,23 +1,96 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ureña Santana Rent Car</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/adminHomepage.css')}}">
+</head>
+<header>
+    <nav>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+        <a href="#" class = "logo "><img src="{{asset('images/LogoComp80.png')}}" alt="Logo"></a>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <a href="{{ route('vehiculos.index') }}" class = "administrarv ">Administrar Vehiculos</a>
 
-                    {{ __('You are logged in!') }}
-                </div>
+        <a href="#" class = "administrarv ">Rentas</a>
+
+        <a href="#" class = "administrarv ">Calendario</a>
+
+        <a href="#" class = "administrarv ">Mensajes</a>
+
+        <a href="clientesregistrados.html" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+
+        <div class="dropdown">
+            <img src="{{asset('images/admin 1.png')}}" alt="A">
+            <div class="dropdown-content">
+                <div id="puntosDropdown">200 puntos</div>
+                <a href="{{ route('logout') }}" 
+                onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                 <img src="{{ asset('images/iconologout.png')}}" width="14px" height="14.44px"> Cerrar Sesión</a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
+
         </div>
+
+    </nav>
+</header>
+<body>
+    <h1 id="hola">
+        Hola<nobr>   {{ Auth::user()->name }}!
+    </h1>
+    <p>Observe el calendario, las rentas, administra tus vehiculos  mira quienes forman parte de la comunidad</p>
+    <!-- CALENDARIO-->
+<a href="#" id="rectangulo1">
+
+    <div id="texto1">
+        Calendario
     </div>
-</div>
-@endsection
+    <div id="linea8"></div>
+    <div id="subtexto1">Chequea las fechas de tus rentas</div>
+    <img id="calendaricono" src="{{ asset('images/iconocalendar.png')}}" alt="Italian Trulli" width="39.6" height="44">
+    
+</a>
+
+    <!-- MENSAJES-->
+    <a href="#" id="rectangulo2">
+        <div id="texto2">
+            Mensajes
+        </div>
+        <div id="linea9"></div>
+        <div id="subtexto2">Revisa lo que te han escrito tus clientes</div>
+        <img id="mensajesicono" src="images/iconomensajes.png" alt="Italian Trulli" width="38.35" height="38.43">
+    
+    </a>
+
+<!-- ADMINISTRAR VEHICULO-->
+
+    <a href="{{ route('vehiculos.index') }}" id="rectangulo3">
+        <div id="texto3">
+            Administrar vehiculo
+        </div>
+        <div id="linea10"></div>
+        <div id="subtexto3">Edita la informacion de tus carros</div>
+        <img id="administraricono" src="images/iconoadministrar.png" width="52" height="27.13">
+
+    </a>
+
+    <!-- Mirar las rentas activa -->
+    <a href="#" id="rectangulo4">
+        <div id="texto4">
+            Mira las rentas activas
+        </div>
+        <div id="linea11"></div>
+        <div id="subtexto4">Cheque las rentas pendientes y pasadas</div>
+        <img id="caricono" src="images/iconocar.png" alt="Italian Trulli" width="34.67" height="52" >
+
+    </a>
+
+
+
+</body>
+</html>

@@ -1,58 +1,58 @@
-/*@import url(registrate.html);*/
 * { box-sizing:border-box; }
 
 body {
-  font-family: 'Inter',sans-serif;
-  background: #ffffff;
+	font-family: 'Inter',sans-serif;
+	background: #eee;
   -webkit-font-smoothing: antialiased;
 }
 
 hgroup { 
-  text-align:center;
-  margin-top: 4em;
+	text-align:center;
+	margin-top: 4em;
 }
 
 h1{  font-weight: 700;
     font-family: 'Inter', sans-serif; }
 
 h3{
-  font-weight: 300;
+	font-weight: 300;
 }
 
 .header3{ 
-  color: #242323;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
+	color: #242323;
+	text-decoration: none;
+	font-family: 'Inter', sans-serif;
  }
  .header3:hover{
-   text-decoration: underline;
+	 text-decoration: underline;
  }
 
 form {
-  width: 380px;
-  margin: 4em auto;
-  padding: 3em 2em 2em 2em;
-  background: RGB(255,162,4,0.05);
-  border: 1px solid #ebebeb;
-  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+	width: 380px;
+	margin: 4em auto;
+	padding: 3em 2em 2em 2em;
+	background: #fffb0036;/*#fffb004f*/
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+	/*box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/
 }
 
 .group { 
-  position: relative; 
-  margin-bottom: 45px; 
+	position: relative; 
+	margin-bottom: 45px; 
 }
 
 input {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  -webkit-appearance: none;
-  display: block;
-  background: #f3f17b00;
-  color: #242323;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #757575;
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	background: #f3f17b00;
+	color: #242323;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
 }
 
 input:focus { outline: none; }
@@ -61,44 +61,44 @@ input:focus { outline: none; }
 /* Label */
 
 label {
-  color: rgb(53, 52, 52); 
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: all 0.2s ease;
-  
+	color: rgb(53, 52, 52); 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+	
 }
 
 
 /* active */
 
 input:focus ~ label, input.used ~ label {
-  top: -20px;
+	top: -20px;
   transform: scale(.75); left: -2px;
-  /* font-size: 14px; */
-  color: black;
+	/* font-size: 14px; */
+	color: black;
 }
 
 
 /* Underline */
 
 .bar {
-  position: relative;
-  display: block;
-  width: 100%;
+	position: relative;
+	display: block;
+	width: 100%;
 }
 
 .bar:before, .bar:after {
-  content: '';
-  height: 2px; 
-  width: 0;
-  bottom: 1px; 
-  position: absolute;
-  background: gold; 
-  transition: all 0.2s ease;
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: gold; 
+	transition: all 0.2s ease;
 }
 
 .bar:before { left: 50%; }
@@ -114,28 +114,28 @@ input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
 /* Highlight */
 
 .highlight {
-  position: absolute;
-  height: 60%; 
-  width: 100px; 
-  top: 25%; 
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
+	position: absolute;
+	height: 60%; 
+	width: 100px; 
+	top: 25%; 
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
 }
 
 
 /* active */
 
 input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
 }
 
 
 /* Animations */
 
 @keyframes inputHighlighter {
-  from { background: black; }
-  to  { width: 0; background: transparent; }
+	from { background: black; }
+	to 	{ width: 0; background: transparent; }
 }
 
 
@@ -172,13 +172,22 @@ input:focus ~ .highlight {
 
 .buttonGold:hover { background: #fffb0000; }
 
-p{  text-align: center;}
+p{	text-align: center;}
+
 .abuenogracias{
-  text-decoration:double;
-  color: black;
-  font-weight: bold;
+	text-decoration:double;
+	color: black;
+	font-weight: bold;
 }
 .abuenogracias:hover{
+	text-decoration: underline;
+}
+
+.resetP{
+  text-decoration: none;
+  color: black;
+}
+.resetP:hover{
   text-decoration: underline;
 }
 
@@ -206,7 +215,7 @@ p{  text-align: center;}
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(238, 223, 14, 0.253);
 }
 
 .ripples.is-active .ripplesCircle {
@@ -260,7 +269,7 @@ nav{
     background: gold;
     border-radius: 5px;
     margin-right: 25px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     border: 2px solid gold;
     border-radius: 5px;
     text-decoration: none;
@@ -273,7 +282,7 @@ nav{
     border: 2px solid gold;
     border-radius: 5px;
     margin-right: 25px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     text-decoration: none;
     font-weight: 500;
 }

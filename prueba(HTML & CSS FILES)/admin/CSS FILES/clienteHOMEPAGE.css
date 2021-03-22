@@ -233,11 +233,6 @@ nav{
 }
 /* MENU DROPDOWN */
 .dropdown{
-    position: absolute;
-    width: 150px;                      /* TOY TRATANDO DE ARREGLAR EL ANCHO */
-    height: 200px;
-
-
     float: left;
     overflow: hidden;
     display: inline;

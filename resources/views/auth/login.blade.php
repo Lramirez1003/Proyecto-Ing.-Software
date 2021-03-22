@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Ureña Rent-Car</title>
-    <link rel="stylesheet" href="{{ asset('css/Log-in.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
     <script type="text/javascript"src={{ asset('js/Log-in.js') }}></script>    
 </head>
 <header>
   <nav>
-      <a href="#" class = "logo "><img src={{ asset('images/LogoComp90.png') }} alt="Logo"></a>
+      <a href="#" class = "logo "><img src={{ asset('images/LogoComp80.png') }} alt="Logo"></a>
       <a href="#" class = "nav-menu ">Rentar</a>
       <a href="#" class = "nav-menu ">Nosotros</a>
       <a href="#" class = "nav-menu ">Aprender</a>
-      <a href="/Log-inTemplate.html" class = "nav-iniciarsesion ">Inicia Sesión</a>
+      <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
       <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
   </nav>
 </header>
