@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ureña Rent-Car</title>
+    <link rel="stylesheet" href="CSS FILES/Log-in.css">
+    <script type="text/javascript"src='JS/Log-in.js'></script>    
+</head>
+<header>
+  <nav>
+      <a href="/Homepage.html" class = "logo " ><img src="/images/LogoComp80.png" alt="Logo"></a>
+      <button class="nav-button"onclick="accion()" >Menú</button>
+      <a href="#" class = "nav-menu ">Rentar</a>
+      <a href="#" class = "nav-menu ">Nosotros</a>
+      <a href="#" class = "nav-menu ">Aprender</a>
+      <a href="/Log-inTemplate.html" class = "nav-iniciarsesion ">Inicia Sesión</a>
+      <a href="#" class = "nav-registro">Regístrate</a>
+  </nav>
+  <script>
+    function accion(){
+      var ancla = document.getElementsByClassName('nav-menu');
+      for (var i = 0; i < ancla.length; i++){
+          ancla[i].classList.toggle('desaparece');
+      }
+    }
+</script>
+
+</header>
+<body style="background-color: white;">
+  <!-- TITULO -->
+<hgroup>
+  <h1>Inicia Sesion</h1>
+  <a href="#"class="header3 "><h3>Vuelve donde te quedaste</h3></a>
+</hgroup>
+<!-- FORMULARIO -->
+<form>
+  <div class="group">
+    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <label>Correo electronico</label>
+  </div>
+  <div class="group">
+    <input type="password"><span class="highlight"></span><span class="bar"></span>
+    <label>Contraseña</label>
+  </div>
+  <button type="button" class="button buttonGold">Entrar
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+  <p>No tienes cuenta? <a href="#" class = "abuenogracias">Registrate</a></p>
+  <p><a href="#" class="resetP">Se te olvido la contraseña?</a></p>
+</form>
+
+
+<footer><p>© 2021 Todos los derechos reservados.</p></footer>
+</body>
+
+</html>
