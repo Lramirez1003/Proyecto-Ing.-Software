@@ -129,7 +129,7 @@
     width: 38.35px;
     height: 38.43px;
     left: 232px;
-    top: 122px;
+    top: 150px;
 }
 /*----------------------*/
 
@@ -525,7 +525,7 @@ nav{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    
+
     min-width: 40px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
