@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\vehiculos;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Auth;
 
 
 class VehiculosController extends Controller
@@ -39,6 +40,12 @@ class VehiculosController extends Controller
 
     public function index()
     {
+        if (Auth::guest())
+        {
+            return redirect()->route('home');
+        }
+
+
         $vehiculoss=vehiculos::all();
 
         if (session('success_message')){
@@ -47,15 +54,20 @@ class VehiculosController extends Controller
         
 
 
-        return view('index',['vehiculoss'=>$vehiculoss],compact('vehiculoss'));
+        return view('admin.vehiculos.index',['vehiculoss'=>$vehiculoss],compact('vehiculoss'));
     }
 
     // Método para redireccionar a la pagina para editar el vehiculo
 
     public function edit($vehiculo_id)
     {
+        if (Auth::guest())
+        {
+            return redirect()->route('home');
+        }
+
         $vehiculo = vehiculos::findOrFail($vehiculo_id);
-        return view('edit',[
+        return view('admin.vehiculos.edit',[
             "vehiculo" => $vehiculo
         ]);
     }
