@@ -17,16 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vehiculos', [
-    'uses'=>'App\Http\Controllers\VehiculosController@index',
-    'as'=>'vehiculos.index'
-]);
+
 
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Vehiculos
+
+Route::get('/vehiculos', [
+    'uses'=>'App\Http\Controllers\VehiculosController@index',
+    'as'=>'vehiculos.index'
+]);
 
 Route::post('/create',[
     'uses'=>'App\Http\Controllers\VehiculosController@create',
@@ -48,27 +52,65 @@ Route::delete('/vehiculos/{vehiculo}',[
     'as'=>'vehiculos.delete'
 ]);
 
-Route::get('/clientes', [
+//Cliente
+Route::get('/Clientes', [
     'uses'=>'App\Http\Controllers\ClienteController@index',
     'as'=>'clientes.index'
 ]);
+
 
 Route::post('/Agregar cliente',[
     'uses'=>'App\Http\Controllers\ClienteController@create',
     'as'=>'cliente.create'
 ]);
 
-Route::get('/cliente/{cliente}/edit',[
+Route::get('/Cliente/{cliente}/edit',[
     'uses'=>'App\Http\Controllers\ClienteController@edit',
     'as'=>'cliente.edit'
 ]);
 
-Route::post('/cliente/{cliente}',[
+Route::post('/Cliente/{cliente}',[
     'uses'=>'App\Http\Controllers\ClienteController@update',
     'as'=>'cliente.update'
 ]);
 
-Route::delete('/cliente/{cliente}',[
+Route::delete('/Cliente/{cliente}',[
     'uses'=>'App\Http\Controllers\ClienteController@destroy',
     'as'=>'cliente.delete'
 ]);
+
+//Renta
+
+#Route::resource('renta','RentasController');
+
+Route::get('/Rentas', [
+    'uses'=>'App\Http\Controllers\RentasController@index',
+    'as'=>'rentas.index'
+]);
+
+
+Route::get('/AgregarRenta',[
+    'uses'=>'App\Http\Controllers\RentasController@create',
+    'as'=>'renta.create'
+]);
+
+Route::post('/pruebaStore',[
+    'uses'=>'App\Http\Controllers\RentasController@store',
+    'as'=>'renta.store'
+]);
+
+Route::get('/Renta/{renta}/edit',[
+    'uses'=>'App\Http\Controllers\RentasController@edit',
+    'as'=>'renta.edit'
+]);
+
+Route::post('/Renta/{renta}',[
+    'uses'=>'App\Http\Controllers\RentasController@update',
+    'as'=>'renta.update'
+]);
+
+Route::delete('/Renta/{renta}',[
+    'uses'=>'App\Http\Controllers\RentasController@destroy',
+    'as'=>'renta.delete'
+]);
+

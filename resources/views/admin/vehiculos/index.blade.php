@@ -38,7 +38,6 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                <div id="puntosDropdown">200 puntos</div>
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -74,7 +73,7 @@ top: 0px;">Agregar Vehiculos</h4>
         @csrf
 
         <div id="fotoVehiculo" >
-            <p><img id="blah" src="images/insert_photo.svg" alt=" " /></p>
+            <p><img id="blah" src="{{ asset('images/insert_photo.svg')}}" alt=" " /></p>
             <input id="inputArchivo"  type="file" name="image" id="btn-file" />
             <p >Inserte imagen del vehiculo </p>
         </div>
@@ -92,7 +91,7 @@ top: 0px;">Agregar Vehiculos</h4>
         <div class="group">
 
             <select class="inputTexto" name="Tipo" id="tipoCarro" required> <span class="highlight"></span><span class="bar"></span>
-                <option hidden>Elija el tipo de carro</option>
+                <option value="0">Elija el tipo de carro</option>
                 <option value="Compacto">Compacto</option>
                 <option value="Jeepeta">Jeepeta</option>
             </select>

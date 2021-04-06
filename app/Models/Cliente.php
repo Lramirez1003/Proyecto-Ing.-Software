@@ -10,17 +10,17 @@ class Cliente extends Model
 {
     use HasFactory;
 
-    /*protected $dates = [
+    protected $dates = [
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
     protected $fillable = [
-        'nombre',
-        'telefono',
-        'licencia',
-        'email',
+        'Nombre',
+        'Telefono',
+        'Licencia',
+        'Email',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -28,6 +28,6 @@ class Cliente extends Model
 
     protected function serializeDate(DateTimeInterface $date)
     {
-        return $date->format('Y-m-d H:i:s');
-    }*/
+        return $date->format('Y-m-d');
+    }
 }

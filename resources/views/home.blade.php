@@ -32,7 +32,7 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                <div id="puntosDropdown">200 puntos</div>
+                
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -88,7 +88,7 @@
     </a>
 
     <!-- Mirar las rentas activa -->
-    <a href="#" id="rectangulo4">
+    <a href="{{ route('rentas.index') }}" id="rectangulo4">
         <div id="texto4">
             Mira las rentas activas
         </div>

@@ -23,7 +23,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{ route('rentas.index') }}" class = "administrarv ">Rentas
             <img src="images/carnolmal.png" width="20px" height="16px">
 
         </a>
@@ -56,9 +56,9 @@
 </header>
 
 <body style="background-color: white;">
-    <h1>Tus clientes</h1>
+    <h1>Tus rentas</h1>
     <div id="linea1"></div>
-    <button class="btn-popup" onclick="openForm()">
+    <!--<button class="btn-popup" onclick="openForm()">
         <img src="{{ asset('images/addicon.png')}}" style="position: absolute;
 width: 31px;
 height: 31px;
@@ -66,41 +66,55 @@ left: 25px;
 top: 15px;">
         <h4 style="position: absolute;
 left: 80px;
-top: 0px;">Agregar cliente</h4>
-    </button>
-    <!--    FORMULARIO PARA AGREGAR cliente        -->
-    <div id="myForm">
-    <form action="{{route('cliente.create')}}" method="post" enctype="multipart/form-data" class="formulario">
+top: 0px;">Agregar renta</h4>
+    </button>-->
+    <!--    FORMULARIO         -->
+    <div>
+    <form action="{{$action}}" method="POST" enctype="multipart/form-data" class="formulario">
         @csrf
 
-        <h2>Agregando cliente...</h2>
-        <div id="nombreVehiculo" class="group">
-            <input class="inputTexto" type="text" name="Nombre" required><span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Nombre</label>
+        <h2>Agregando renta...</h2>
+        <div class="group">
+           
+            <select class="inputTexto" name="cliente_id" id="cliente_id" required> <span class="highlight"></span><span class="bar"></span>
+                <option value="0">Selecciona el cliente</option>
+               
+
+                @foreach ($clientes as $cliente)
+                <option value="{{$cliente->id}}">{{$cliente->Nombre}}</option>
+                @endforeach
+
+           
+            </select>
         </div>
 
         <div class="group">
-            <input class="inputTexto" type="text" name="Telefono" required><span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Telefono:</label>
-        </div>
-        <div class="group">
+            
+            <select class="inputTexto" name="vehiculo_id" id="vehiculo_id" required> <span class="highlight"></span><span class="bar"></span>
+                <option value="0">Selecciona el vehiculo</option>
+                
+                
+                    @foreach ($vehiculos as $vehiculo)
+                    <option value="{{$vehiculo->id}}">{{$vehiculo->Nombre}}</option>
+                    @endforeach
 
-            <input class="inputTexto" type="text" name="Licencia" required> <span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Licencia:</label>
-
-        </div>
-
-        <div class="group">
-
-            <input class="inputTexto" type="email" name="Email" required> <span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Correo:</label>
-
+               
+            </select>
         </div>
 
+        <div class="group" >
+            <label for="fecha_inicio">Fecha de inicio:</label>
+            <input type="date" name="fecha_inicio" id="fecha_inicio">
+        </div>
+
+        <div class="group" >
+            <label for="fecha_fin">Fecha de entrega:</label>
+            <input type="date" name="fecha_fin" id="fecha_fin">
+        </div>
 
          
          <button type="reset" value="reset" class="button" style="color: orange;border: 2px solid;
-         border-radius: 5px;" onclick="closeForm()" >Cancelar
+         border-radius: 5px;">Cancelar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
          </button>
          <button type="submit" value="submit" class="button" style="margin-left: 50%;background-color: rgba(255, 167, 81, 1);border-radius: 5px;">Agregar
@@ -110,34 +124,6 @@ top: 0px;">Agregar cliente</h4>
     </form>
 </div>
 
-<table id="t01"  >   
-    <tr>
-      <th>Nombre</th>
-      <th>Telefono</th>
-      <th>Licencia</th>
-      <th>Correo</th>
-      <th></th>
-    </tr>
-    @foreach($clientes as $cliente)
-    <tr>
-      <td>{{$cliente->Nombre}}</td>
-      <td>{{$cliente->Telefono}}</td>
-      <td>{{$cliente->Licencia}}</td>
-      <td>{{$cliente->Email}}</td>
-      <td>
-        <a href="{{route('cliente.edit',["cliente"=>$cliente])}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
-        <form action="{{route('cliente.delete',["cliente"=>$cliente])}}" method="post">
-        @method('delete')
-        @csrf
-        <button type="submit" class="btn-borrar" >Borrar</button>
-        </form>
-      </td>
-    </tr>
-    @endforeach
-
-
-
-  </table>
 
     @include('sweetalert::alert')
 

@@ -33,7 +33,7 @@ class VehiculosController extends Controller
 
         $vehiculo->save();
 
-        return redirect()->back()->withSuccessMessage('Successfully added');
+        return redirect()->back()->withSuccessMessage('Agregado satisfactoriamente');
     }
 
     // Método para mostrar el vehiculo

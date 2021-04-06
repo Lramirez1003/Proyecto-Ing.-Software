@@ -37,17 +37,38 @@
       <label>Nombre y apellido</label>
     </div>
     <div class="group">
-      <input type="text" id="cedula" name="cedula" value="{{ old('cedula')}}" required autocomplete="cedula" ><span class="highlight"></span><span class="bar"></span>
+      <input type="text" class="@error('cedula') is-invalid @enderror" id="cedula" name="cedula" value="{{ old('cedula')}}" required autocomplete="cedula" ><span class="highlight"></span><span class="bar"></span>
       <label>Cédula</label>
+
+      @error('cedula')
+      <span role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
     </div>
+
     <div class="group">
-      <input type="email" id="email" name="email" value="{{ old('email') }}"><span class="highlight"></span><span class="bar"></span>
+      <input type="email" class="@error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}"><span class="highlight"></span><span class="bar"></span>
       <label>Correo electronico</label>
+
+      @error('email')
+      <span role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
+
     </div>
     <div class="group">
-      <input type="password" id="password" name="password" required autocomplete="new-password"><span class="highlight"></span><span class="bar"></span>
+      <input type="password" class="@error('password') is-invalid @enderror" id="password" name="password" required autocomplete="new-password"><span class="highlight"></span><span class="bar"></span>
       <label>Contraseña</label>
+
+      @error('password')
+      <span role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+  @enderror
     </div>
+
     <div class="group">
       <input type="password" id="password-confirmation" name="password_confirmation" required autocomplete="new-password"><span class="highlight"></span><span class="bar"></span>
       <label>Verificar contraseña</label>

@@ -38,7 +38,6 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                <div id="puntosDropdown">200 puntos</div>
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">

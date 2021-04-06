@@ -38,6 +38,7 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
+                <div id="puntosDropdown">200 puntos</div>
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -64,24 +65,24 @@
     
             <h2>Actualizando cliente...</h2>
             <div id="nombreVehiculo" class="group">
-                <input class="inputTexto" type="text" name="Nombre" value="{{$cliente->Nombre}}"><span class="highlight"></span><span class="bar"></span>
+                <input class="inputTexto" type="text" name="Nombre" value="{{$cliente->nombre}}"><span class="highlight"></span><span class="bar"></span>
                 <label class="labelTexto">Nombre</label>
             </div>
     
             <div class="group">
-                <input class="inputTexto" type="text" name="Telefono" value="{{$cliente->Telefono}}"><span class="highlight"></span><span class="bar"></span>
+                <input class="inputTexto" type="text" name="Telefono" value="{{$cliente->telefono}}"><span class="highlight"></span><span class="bar"></span>
                 <label class="labelTexto">Telefono:</label>
             </div>
             <div class="group">
     
-                <input class="inputTexto" type="text" name="Licencia" value="{{$cliente->Licencia}}"> <span class="highlight"></span><span class="bar"></span>
+                <input class="inputTexto" type="text" name="Licencia" value="{{$cliente->licencia}}"> <span class="highlight"></span><span class="bar"></span>
                 <label class="labelTexto">Licencia:</label>
     
             </div>
     
             <div class="group">
     
-                <input class="inputTexto" type="email" name="Email" value="{{$cliente->Email}}"> <span class="highlight"></span><span class="bar"></span>
+                <input class="inputTexto" type="email" name="Email" value="{{$cliente->email}}"> <span class="highlight"></span><span class="bar"></span>
                 <label class="labelTexto">Correo:</label>
     
             </div>

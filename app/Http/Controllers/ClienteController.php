@@ -44,12 +44,12 @@ class ClienteController extends Controller
         $clientes=Cliente::all();
 
         if (session('success_message')){
-            Alert::success('Agregado :)',session('success_message'));
+            Alert::success('Agregado',session('success_message'));
         }
         
 
 
-    return view('admin.clientes.index',['clientes'=>$clientes]/*,compact('clientes')*/);
+    return view('admin.clientes.index',['clientes'=>$clientes],compact('clientes'));
     }
 
     public function edit($cliente_id)
