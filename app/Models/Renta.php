@@ -40,7 +40,7 @@ class Renta extends Model
         return $this->belongsTo(vehiculos::class, 'Vehiculo');
     }
 
-    public function getFechaInicioAttribute($value)
+    /*public function getFechaInicioAttribute($value)
     {
         return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
     }
@@ -58,5 +58,5 @@ class Renta extends Model
     public function setFechaFinAttribute($value)
     {
         $this->attributes['fecha_fin'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
-    }
+    }*/
 }

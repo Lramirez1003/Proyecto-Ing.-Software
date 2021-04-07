@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -33,7 +33,7 @@
 
         </a>
 
-        <a href="clientesregistrados.html" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="#" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
@@ -88,7 +88,22 @@ top: 0px;">Agregar renta</h4>
             </select>
         </div>
 
-        <div class="group">
+        <div class="group" style="
+        left :510px;
+        bottom: 100px;
+        
+        
+        ">
+            <label for="fecha_inicio">Fecha de salida:</label>
+            <input type="date" name="fecha_inicio" id="fecha_inicio" required>
+        </div>
+
+
+        <div class="group"style="
+        bottom: 60px;
+        
+        
+        ">
             
             <select class="inputTexto" name="vehiculo_id" id="vehiculo_id" required> <span class="highlight"></span><span class="bar"></span>
                 <option value="0">Selecciona el vehiculo</option>
@@ -102,24 +117,28 @@ top: 0px;">Agregar renta</h4>
             </select>
         </div>
 
-        <div class="group" >
-            <label for="fecha_inicio">Fecha de inicio:</label>
-            <input type="date" name="fecha_inicio" id="fecha_inicio">
-        </div>
 
-        <div class="group" >
-            <label for="fecha_fin">Fecha de entrega:</label>
-            <input type="date" name="fecha_fin" id="fecha_fin">
+
+        <div class="group" style="
+        left :510px;
+        bottom: 150px;
+        
+        
+        ">
+            <label for="fecha_fin">Fecha de entrada:</label>
+            <input type="date" name="fecha_fin" id="fecha_fin" required>
         </div>
 
          
-         <button type="reset" value="reset" class="button" style="color: orange;border: 2px solid;
-         border-radius: 5px;">Cancelar
+         <a href="{{ url()->previous() }}"  class="button" style="color: orange;border: 2px solid;
+         border-radius: 5px; text-decoration: none; ">Cancelar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-         </button>
+        </a>
          <button type="submit" value="submit" class="button" style="margin-left: 50%;background-color: rgba(255, 167, 81, 1);border-radius: 5px;">Agregar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
          </button>
+
+
 
     </form>
 </div>

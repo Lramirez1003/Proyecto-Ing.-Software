@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>

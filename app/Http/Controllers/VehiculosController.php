@@ -49,7 +49,7 @@ class VehiculosController extends Controller
         $vehiculoss=vehiculos::all();
 
         if (session('success_message')){
-            Alert::success('Agregado :)',session('success_message'));
+            Alert::success('Vehiculo agregado',session('success_message'));
         }
         
 

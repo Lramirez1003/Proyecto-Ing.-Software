@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -33,7 +33,7 @@
 
         </a>
 
-        <a href="clientesregistrados.html" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
@@ -58,15 +58,15 @@
 <body style="background-color: white;">
     <h1>Tus rentas</h1>
     <div id="linea1"></div>
-    <a href="{{route('renta.create')}}">
+    <a href="{{route('renta.create')}}" class="btn-popup">
         <img src="{{ asset('images/addicon.png')}}" style="position: absolute;
 width: 31px;
 height: 31px;
 left: 25px;
-top: 15px;">
+top: 25px;">
         <h4 style="position: absolute;
 left: 80px;
-top: 0px;">Agregar renta</h4>
+top: 10px;">Agregar renta</h4>
     </a>
     <!--    FORMULARIO         -->
 
@@ -75,8 +75,8 @@ top: 0px;">Agregar renta</h4>
     <tr>
       <th>Cliente</th>
       <th>Vehiculo</th>
-      <th>Fecha inicial</th>
-      <th>Fecha final</th>
+      <th>Fecha de salida</th>
+      <th>Fecha de entrada</th>
       <th></th>
     </tr>
     @foreach ($rentas as $renta)
@@ -84,11 +84,15 @@ top: 0px;">Agregar renta</h4>
    
     <tr>
       <td>{{$renta->cliente->Nombre ?? ''}}</td>
-      <td>{{$renta->vehiculo['Nombre']}}</td>
-      <td>1</td>
-      <td>1</td>
+      <td>{{$renta->vehiculo->Nombre ?? ''}}</td>
+      <td>{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
+      <td>{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
       <td>
-
+        <form action="{{route('renta.delete',$renta->id)}}" method="post">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn-borrar" >Borrar</button>
+            </form>
       </td>
     </tr>
     

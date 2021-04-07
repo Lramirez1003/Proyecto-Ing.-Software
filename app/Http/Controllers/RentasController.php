@@ -19,6 +19,15 @@ class RentasController extends Controller
      */
     public function index()
     {
+        if (Auth::guest())
+        {
+            return redirect()->route('home');
+        }
+
+        if (session('success_message')){
+            Alert::success('Renta agregada',session('success_message'));
+        }
+
         #$rentas=Renta::all();
         $rentas=Renta::with(['cliente','vehiculo'])->get();
         return view('admin.rentas.index',compact('rentas'));
@@ -31,11 +40,17 @@ class RentasController extends Controller
      */
     public function create()
     {
+        if (Auth::guest())
+        {
+            return redirect()->route('home');
+        }
+
         $clientes = Cliente::all();
         $vehiculos = Vehiculos::all();
         $action=route('renta.store');
 
         return view('admin.rentas.create', compact('clientes','vehiculos','action'));
+        
     }
 
     /**
@@ -56,14 +71,10 @@ class RentasController extends Controller
         $renta->fecha_fin= $request->input('fecha_fin');
 
         $renta->save();
-        #opcion 2
-        #$renta = new Renta($request->input());
-        #$renta = new Renta();
-        #$renta->cliente=$request->input('cliente_id');
-        #$renta->vehiculo=$request->input('vehiculo_id');
+
 
         
-        return redirect()->route('rentas.index'); 
+        return redirect()->route('rentas.index')->withSuccessMessage('Agregada satisfactoriamente'); 
     }
 
     /**
@@ -85,7 +96,13 @@ class RentasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $renta=Renta::find($id);
+        $clientes = Cliente::all();
+        $vehiculos = Vehiculos::all();
+        $put=True;
+        $action= route('renta.update',['id'=>$id]);
+
+        return view('admin.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
     }
 
     /**
@@ -97,7 +114,12 @@ class RentasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $renta = Renta::find($id);
+        $renta->fecha_inicio= $request->input('fecha_inicio');
+        $renta->fecha_fin= $request->input('fecha_fin');
+        $renta->update();
+
+        return redirect()->route('renta.index');
     }
 
     /**
@@ -108,6 +130,8 @@ class RentasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Renta::destroy($id);
+
+        return back();
     }
 }

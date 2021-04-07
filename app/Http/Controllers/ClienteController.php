@@ -44,7 +44,7 @@ class ClienteController extends Controller
         $clientes=Cliente::all();
 
         if (session('success_message')){
-            Alert::success('Agregado',session('success_message'));
+            Alert::success('Cliente agregado',session('success_message'));
         }
         
 

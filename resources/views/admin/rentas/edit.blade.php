@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -38,7 +38,7 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                <div id="puntosDropdown">200 puntos</div>
+                
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -55,37 +55,25 @@
 </header>
 
 <body style="background-color: white;">
-    <h1>Tus Clientes</h1>
+    <h1>Tus Rentas</h1>
     <div id="linea1"></div>
     </button>
     <!--    FORMULARIO PARA AGREGAR VEHICULOS        -->
     <div>
-        <form action="{{route('cliente.update',["cliente"=>$cliente])}}" method="post" enctype="multipart/form-data" class="formulario">
+        <form action="{{route('renta.update',$renta->id)}}" method="post" enctype="multipart/form-data" class="formulario">
             @csrf
     
-            <h2>Actualizando cliente...</h2>
-            <div id="nombreVehiculo" class="group">
-                <input class="inputTexto" type="text" name="Nombre" value="{{$cliente->nombre}}"><span class="highlight"></span><span class="bar"></span>
-                <label class="labelTexto">Nombre</label>
+            <h2>Actualizando renta...</h2>
+            <div class="group">
+            <label for="fecha_inicio">Fecha de inicio:</label>
+            <input type="date" name="fecha_inicio" id="fecha_inicio" value="{{$renta->fecha_inicio}}" >
             </div>
     
             <div class="group">
-                <input class="inputTexto" type="text" name="Telefono" value="{{$cliente->telefono}}"><span class="highlight"></span><span class="bar"></span>
-                <label class="labelTexto">Telefono:</label>
+                <label for="fecha_fin">Fecha de entrega:</label>
+            <input type="date" name="fecha_fin" id="fecha_fin" value="{{$renta->fecha_fin}}" >
             </div>
-            <div class="group">
-    
-                <input class="inputTexto" type="text" name="Licencia" value="{{$cliente->licencia}}"> <span class="highlight"></span><span class="bar"></span>
-                <label class="labelTexto">Licencia:</label>
-    
-            </div>
-    
-            <div class="group">
-    
-                <input class="inputTexto" type="email" name="Email" value="{{$cliente->email}}"> <span class="highlight"></span><span class="bar"></span>
-                <label class="labelTexto">Correo:</label>
-    
-            </div>
+
     
     
              
@@ -93,6 +81,13 @@
              <button type="submit" value="submit" class="button" style="margin-left: 50%;background-color: rgba(255, 167, 81, 1);border-radius: 5px;">Actualizar
                 <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
              </button>
+
+
+                @if (!empty($put))
+		
+		        <input type="hidden" name="_method"	value="PUT">
+
+	            @endif
     
         </form>
     </div>

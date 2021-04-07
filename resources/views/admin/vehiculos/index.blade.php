@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -23,7 +23,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{ route('rentas.index') }}" class = "administrarv ">Rentas
             <img src="images/carnolmal.png" width="20px" height="16px">
 
         </a>
@@ -74,7 +74,7 @@ top: 0px;">Agregar Vehiculos</h4>
 
         <div id="fotoVehiculo" >
             <p><img id="blah" src="{{ asset('images/insert_photo.svg')}}" alt=" " /></p>
-            <input id="inputArchivo"  type="file" name="image" id="btn-file" />
+            <input id="inputArchivo"  type="file" name="image" id="btn-file" required  />
             <p >Inserte imagen del vehiculo </p>
         </div>
 

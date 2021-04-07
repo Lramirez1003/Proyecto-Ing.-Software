@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
 </head>
 <header>
@@ -23,7 +23,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{ route('rentas.index') }}" class = "administrarv ">Rentas
             <img src="images/carnolmal.png" width="20px" height="16px">
 
         </a>
@@ -33,7 +33,7 @@
 
         </a>
 
-        <a href="clientesregistrados.html" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="{{ route('clientes.index') }}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">

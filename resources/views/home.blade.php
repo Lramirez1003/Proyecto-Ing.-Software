@@ -5,6 +5,7 @@
     <title>Ureña Santana Rent Car</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/adminHomepage.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
     <nav>
@@ -16,7 +17,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{ route('rentas.index') }}" class = "administrarv ">Rentas
             <img src="images/carnolmal.png" width="20px" height="16px">
 
         </a>
@@ -47,7 +48,7 @@
 
     </nav>
 </header>
-<body>
+<body >
     <h1 id="hola">
         Hola<nobr>   {{ Auth::user()->name }}!
     </h1>
