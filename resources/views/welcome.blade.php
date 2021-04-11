@@ -12,18 +12,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
     <link rel="stylesheet" href="{{asset('css/Homepage.css')}}">
 </head>
 <header>
   <nav>
-      <a href="#" class = "logo " ><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
+      <a href="Homepage.html" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
+      <button class="nav-button"onclick="accion()" >Menú</button>
       <a href="#" class = "nav-menu ">Rentar</a>
-      <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
-      <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
-      <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+      <a href="about.html" class = "nav-menu ">Nosotros</a>
+      <a href="aprender.html" class = "nav-menu ">Aprender</a>
+      <a href="Log-inTemplate.html" class = "nav-iniciarsesion ">Inicia Sesión</a>
+      <a href="registrate.html" class = "nav-registro">Regístrate</a>
   </nav>
 
 <body>
@@ -50,7 +50,7 @@
                 <div><a href="#" class="btn-seleccionar">Seleccionar</a></div>
             </div>
 
-            <div class="elantraBanner"><img src="{{('images/elantra.jpeg')}}" alt="Elantra" width="605" height="398"></div>
+            <div class="elantraBanner"><img src="images/bannerlogoafuera.JPG" alt="Elantra" width="605" height="398"></div>
         </section>
 
         <!-- CARRUSEL DE VEHICULOS -->
@@ -60,11 +60,13 @@
             <div id="linea2"></div>
             <p class="textBloques">Explora los diferentes tipos de carros</p>
             <div class="owl-carousel owl-theme">
-               @foreach ($vehiculoss as $vehiculo)
-                   
-                <a href="#"class="nombresVehiculos"> <img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt=" " width="206" height="125">{{$vehiculo->Nombre}} <b>{{$vehiculo->N_pasajeros}}</b>
+               <a href="#"class="nombresVehiculos"> <img src="images/elantra.jpeg" alt="elantra" width="206" height="125">KIA <b>4</b>
                     <i class="material-icons">person</i></a>
-                    @endforeach
+                <a href="#" class="nombresVehiculos"><img src="images/volkswaggen.png" alt="jispeta" width="206" height="125">Volswaggen <b>4</b>
+                    <i class="material-icons">person</i></a>
+                <a href="#"class="nombresVehiculos"><img src="images/avante.JPG" alt="Si" width="206" height="125">Avante <b>4</b>
+                    <i class="material-icons">person</i></a>
+
             </div>
         </section>
 
@@ -96,17 +98,17 @@
                 <div id="linea3"></div>
 
                 <p class="textBloques">Conoce como puedes cuidar mejor tu vehiculo</p>
-                <a href="#" id="btn-Aprender">Aprender</a>
+                <a href="aprender.html" id="btn-Aprender">Aprender</a>
         </section>
-            <div id="aprenderFoto"><img src="{{asset('images/arreglandocarro.png')}}" alt="Aprender" width="445" height="318"></div>
+            <div id="aprenderFoto"><img src="images/arreglandocarro.png" alt="Aprender" width="445" height="318"></div>
 
          <!-- BLOQUE NOSOTROS -->
-         <div id="conocenosFoto"><img src="{{asset('images/volkswaggen.png')}}" alt="Conócenos" width="510" height="318"></div>
+         <div id="conocenosFoto"><img src="images/volkswaggen.png" alt="Conócenos" width="510" height="318"></div>
             <section class="nosotrosBloque">
                 <h2 class="h2Bloques">Conocenos</h2>
                 <div id="linea4"></div>
                 <p class="textBloques">Mira en quienes nos hemos convertido a traves de los años</p>
-                <a href="#" id="btn-Conocenos">Conócenos</a>
+                <a href="about.html" id="btn-Conocenos">Conócenos</a>
 
              </section>
 
