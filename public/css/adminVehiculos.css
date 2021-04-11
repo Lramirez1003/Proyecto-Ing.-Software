@@ -404,6 +404,7 @@ padding: 8px;
 #t01 tr:hover {background-color: #ddd;}
 
 #t01 th {
+  
 padding-top: 12px;
 padding-bottom: 12px;
 text-align: center;
@@ -426,4 +427,135 @@ border: 2px solid rgb(255, 4, 4);
 border-radius: 2px;
 background: rgb(255, 4, 4);
 text-decoration: none;
+}
+
+/* PRUEBA RENTA BONITA */
+
+
+.relleno{
+  display:block;
+  position: absolute;
+  width: 1230px;
+  height: 219px;
+  left: 105px;
+  top: 258px;
+  
+  border-radius: 5px;
+}
+
+#tipodeCar{
+
+  position: absolute;
+  width: 92px;
+  height: 22px;
+  left: 349px;
+  top: 59px;
+  text-align: center;
+  background: rgba(196, 196, 196, 0.2);
+  border-radius: 2px;
+
+}
+#nPasajeros{
+  position: absolute;
+  left: 372px;
+  top: 87px;
+}
+
+#nombreCar{
+  position: absolute;
+  width: 97px;
+  height: 36px;
+  left: 349px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+
+color: #333333;
+}
+
+#precioDia{
+  position: absolute;
+  width: 160px;
+  height: 31px;
+  left: 711px;
+  top: 0px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 31px;
+
+  color: #333333;
+}
+
+#fechaI{
+  position: absolute;
+  width: 173px;
+  height: 47px;
+  left: 712px;
+  top: 49px;
+
+  background: rgba(196, 196, 196, 0.15);
+  border-radius: 5px;
+}
+
+#textoFecha{
+  
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 5px;
+
+}
+#flechaFecha{
+  position: absolute;
+  width: 15.5px;
+  height: 27px;
+  left: 793px;
+  top: 116px;
+
+}
+#fechaF{
+  position: absolute;
+  width: 173px;
+  height: 47px;
+  left: 711px;
+  top: 162px;
+
+  background: rgba(196, 196, 196, 0.15);
+  border-radius: 5px;
+}
+
+#bloqueCliente{
+  position: absolute;
+  width: 297px;
+  height: 219px;
+  left: 933px;
+  top: 0px;
+
+  background: rgba(255, 167, 81, 0.05);
+  border-radius: 5px;
+}
+#nombreClientee{
+
+  position: absolute;
+  width: 193px;
+  height: 18px;
+  left: 79px;
+  top: 40px;
+
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+
+  color: #333333;
 }

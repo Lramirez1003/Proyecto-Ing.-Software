@@ -84,13 +84,18 @@ top: 0px;">Actualizando</h4>
         </div>
 
         <div class="group">
+            <input class="inputTexto" type="text" name="Placa" value="{{$vehiculo->Placa}}"><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Placa del vehiculo:</label>
+        </div>
+
+        <div class="group">
             <input class="inputTexto" type="text" name="Precio" value="{{$vehiculo->Precio}}"><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Precio por dia:</label>
         </div>
         <div class="group">
 
             <select class="inputTexto" name="Tipo" id="tipoCarro" value="{{$vehiculo->Tipo}}"> <span class="highlight"></span><span class="bar"></span>
-                <option hidden>Elija el tipo de carro</option>
+                <option value="0">Elija el tipo de carro</option>
                 <option value="Compacto">Compacto</option>
                 <option value="Jeepeta">Jeepeta</option>
             </select>

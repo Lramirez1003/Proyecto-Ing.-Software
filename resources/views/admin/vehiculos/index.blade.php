@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="{{ asset('css/adminVehiculos.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
+    <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
+
+    
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
@@ -85,9 +88,15 @@ top: 0px;">Agregar Vehiculos</h4>
         </div>
 
         <div class="group">
+            <input class="inputTexto" type="text" name="Placa" required><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Placa del vehiculo:</label>
+        </div>
+
+        <div class="group">
             <input class="inputTexto" type="text" name="Precio" required><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Precio por dia:</label>
         </div>
+
         <div class="group">
 
             <select class="inputTexto" name="Tipo" id="tipoCarro" required> <span class="highlight"></span><span class="bar"></span>
@@ -137,22 +146,29 @@ top: 15px;">
 left: 80px;
 top: 0px;">Ver estadisticas</h4>
     </button>
-<table id="t01"  >     <!-- PODEMOS QUITAR ESTO? O TIENE QUE IR?-->   <!-- TIENE QUE IR, ES EL TAG O LLAMADO DE LA TABLA. ATT: Luis -->
+<table id="t01" style="
+    cursor: pointer;
+    ">   
+    <thead>  
     <tr>
       <th>Foto</th>
-      <th>Nombre</th>
-      <th>Tipo</th>
-      <th>Precio/hora</th>
-      <th>N. pasajeros</th>
-      <th></th>
+      <th data-tsorter="input-text">Nombre</th>
+      <th data-tsorter="input-text">Placa</th>
+      <th data-tsorter="input-text">Tipo</th>
+      <th data-tsorter="numeric">Precio/hora</th>
+      <th data-tsorter="numeric">N. pasajeros</th>
+      
     </tr>
+    </thead>
+    <tbody>
     @foreach($vehiculoss as $vehiculo)
     <tr>
      <td ><img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt=""></td>
-      <td>{{$vehiculo->Nombre}}</td>
-      <td>{{$vehiculo->Tipo}}</td>
-      <td>{{$vehiculo->Precio}}</td>
-      <td>{{$vehiculo->N_pasajeros}}</td>
+      <td>{{$vehiculo->Nombre ?? ''}}</td>
+      <td>{{$vehiculo->Placa ?? ''}}</td>
+      <td>{{$vehiculo->Tipo ?? ''}}</td>
+      <td>{{$vehiculo->Precio ?? ''}}</td>
+      <td>{{$vehiculo->N_pasajeros ?? ''}}</td>
       <td>
         <a href="{{route('vehiculos.edit',["vehiculo"=>$vehiculo])}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
         <form action="{{route('vehiculos.delete',["vehiculo"=>$vehiculo])}}" method="post">
@@ -161,20 +177,23 @@ top: 0px;">Ver estadisticas</h4>
         <button type="submit" class="btn-borrar" >Borrar</button>
         </form>
 
-         <!-- <script >$(document).ready(function() {-->
-              <!-- J QUERY BUSCAR -->
-             <!--  $("#Edtar-btn").click(function() {-->
-              <!--     //Do stuff when clicked-->
-               <!--    alert("Sirve");-->
-            <!--   });
-           });</script> -->
       </td>
     </tr>
     @endforeach
-
+    </tbody>
 
 
   </table>
+
+  <!-- SORT -->
+
+  <script type="text/javascript">
+      function init() {
+    var sorter = tsorter.create('t01');
+}
+    
+    window.onload = init;
+  </script>
 
     @include('sweetalert::alert')
 

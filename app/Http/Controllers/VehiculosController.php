@@ -16,6 +16,7 @@ class VehiculosController extends Controller
         $Nombre=$request['Nombre'];
         $Tipo=$request['Tipo'];
         $Precio=$request['Precio'];
+        $Placa=$request['Placa'];
         $N_pasajeros=$request['N_pasajeros'];
         $FotoName=$request->file('image')->getClientOriginalName();
         $size=$request->file('image')->getSize();
@@ -27,6 +28,7 @@ class VehiculosController extends Controller
         $vehiculo->Nombre=$Nombre;
         $vehiculo->Tipo=$Tipo;
         $vehiculo->Precio=$Precio;
+        $vehiculo->Placa=$Placa;
         $vehiculo->N_pasajeros=$N_pasajeros;
         $vehiculo->FotoName=$FotoName;
         $vehiculo->size=$size;
@@ -47,7 +49,6 @@ class VehiculosController extends Controller
 
 
         $vehiculoss=vehiculos::all();
-
         if (session('success_message')){
             Alert::success('Vehiculo agregado',session('success_message'));
         }
@@ -80,6 +81,7 @@ class VehiculosController extends Controller
             $vehiculo->Nombre = request()->input("Nombre");
             $vehiculo->Tipo = request()->input("Tipo");
             $vehiculo->Precio = request()->input("Precio");
+            $vehiculo->Placa = request()->input("Placa");
             $vehiculo->N_pasajeros = request()->input("N_pasajeros");
 
             $vehiculo->update();

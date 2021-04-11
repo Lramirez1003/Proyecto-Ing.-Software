@@ -1,0 +1,384 @@
+/* AGREGAR EN CADA PLANTILLA QUE SEA NECESARIO | LA PARTE RESPONSIVE TENER EN CUENTA */
+
+/* ------------------------------------------------ Header ------------------------------ */
+
+.logo{
+    flex:1 1 auto;
+    /*width: 40px;
+    height: 50.84px;
+    left: 107px;
+    top: 9px;*/
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+    
+    
+}
+.nav-menu{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+    
+}
+.nav-registro{
+    display: inline-block;
+    color:black;
+    background: gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 20px 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.nav-iniciarsesion{
+    display: inline-block;
+    color:black;
+    border: 2px solid gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-menu:hover{
+    background: gold;
+    border-radius: 5px;
+}
+.nav-iniciarsesion:hover{
+    background: gold;
+    border-radius: 5px;
+}
+.nav-registro:hover{
+    background: #fff;
+    border-radius: 5px;  
+}
+
+header{
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-button{
+  background: gold;
+  color:#fff;
+  padding: 20px 30px;
+  border: 2px solid goldenrod;
+  display: none;
+}
+
+/*------------------------------------------------------------ Footer ------------------------------------------------------------*/
+footer{
+  display         : flex;
+  justify-content : center;
+  
+  margin-top      : 1840px;
+  width           : 100%;
+  left: 0;
+  right: 0;
+  height          : 3rem;
+  
+  background-color: rgb(161, 119, 12);
+  color: white;
+ 
+}
+
+/*------------------------------------------------------------ BODY ------------------------------------------*/
+
+html,body{
+    height: 100%;
+    }
+body{
+    display: flex;
+    flex-direction: column;
+       
+}
+    #page-container{
+    flex: 1 0 auto;
+    }
+/* --------------------- BANNER PRINCIPAL --------------------- */
+.header2{
+    position: absolute;
+    width: 310px;
+    height: 36px;
+    left: 102px;
+    top: 109px;
+}
+#linea1{
+    position: absolute;
+    width: 249px;
+    height: 0px;
+    left: 102px;
+    top: 158px;
+    border: 1px solid gold;
+}
+.BannerHome{
+    background-color: rgba(255, 239, 62, 0.1);
+    position: absolute;
+    width: 1440px;
+    height: 494px;
+    left: 200px;
+    top: 171px;
+    display: flex;
+    
+}
+.FechaElegir{
+    position: absolute;
+    width: 590px;
+    height: 398px;
+    left: 103px;
+    top: 43px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 20px 1px rgba(196, 196, 196, 0.5);
+border-radius: 5px;
+}
+.textoDesde{
+    position: absolute;
+    left: 52px;
+    top: 45px;   
+}
+.fechaDesde{
+    position: absolute;
+    width: 208px;
+    height: 45px;
+    left: 52px;
+    top: 75px;
+
+}
+.textoHasta{
+    position: absolute;
+    left: 328px;
+    top: 45px;   
+}
+.fechaHasta{
+    position: absolute;
+    width: 208px;
+    height: 45px;
+    left: 328px;
+    top: 75px;
+}
+.elantraBanner{
+    position: absolute;
+    left: 732px;
+    top: 43px;
+    
+}
+img{
+    border-radius: 5px;
+}
+.header4{
+    position: absolute;
+    width: 287px;
+    height: 24px;
+    left: 52px;
+    top: 132px;
+}
+.btn-Intermedio{
+    background: #FFFCD8;
+    border-radius: 5px;
+    position: absolute;
+    width: 206px;
+    height: 83px;
+    left: 52px;
+    top: 208px;
+
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+color: #333333;
+
+}
+.btn-Compacto{
+    background: #FFFCD8;
+    border-radius: 5px;
+    position: absolute;
+    width: 206px;
+    height: 83px;
+    left: 328px;
+    top: 208px;
+
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+
+color: #333333;
+}
+.btn-seleccionar{
+    position: absolute;
+    width: 430px;
+    height: 22px;
+    left: 52px;
+    top: 320px;
+    background: #FFEF3E;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: double;
+    color: black;
+    font-weight: 500;
+    padding: 10px 30px;
+
+    
+    
+}
+/* --------------------- CARRUSEL --------------------- */
+.carruselBorde{
+    position: absolute;
+    width: 1214px;
+    height: 313px;
+    left: 310px;
+    top: 678px;
+    background: #33333300; 
+}
+#btn-VerTodos{
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    top: 8px;
+    right: 16px;
+    background: #FFEF3E;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: double;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+
+#iconocar{
+    position: absolute;
+    left: 4px;
+    top: 3px;
+}
+#linea2{
+    position: absolute;
+    width: 149px;
+    height: 0px;
+    left: 530px;
+    top: 70px;
+    border: 1px solid gold;
+}
+i {
+    font-size: 24px !important;
+    vertical-align:middle;
+  }
+.owl-stage{
+    display: flex;
+}
+.nombresVehiculos{
+    text-decoration:double;
+	color: black;
+	
+}
+/* --------------------- APRENDER -------------------- */
+#aprenderBloque{
+    position: absolute;
+    width: 650px;
+    height: 321px;
+    left: 300px;
+    top: 1085px;
+
+    background: rgba(212, 186, 186, 0.103);
+    border-radius: 5px; 
+}
+
+.h2Bloques{
+    text-align:center;
+	margin-top: 1em;
+    font-size: 30px;
+}
+
+#linea3{
+    position: absolute;
+    width: 149px;
+    height: 0px;
+    left: 249px;
+    top: 70px;
+    border: 1px solid gold;
+}
+
+.textBloques{
+    text-align: center;
+    font-weight: 400;
+}
+#btn-Aprender{
+    position: absolute;
+    width: 138px;
+    height: 22px;
+    left: 230px;
+    top: 178px;
+    text-align: center;
+    padding: 10px 30px;
+    background: #FFEF3E;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+#aprenderFoto{
+    position: absolute;
+    left: 1000px;
+    top: 1088px;
+    
+}
+/* --------------------- NOSOTROS -------------------- */
+.nosotrosBloque{
+    position: absolute;
+    width: 753px;
+    height: 321px;
+    left: 864px;
+    top: 1551px;
+    
+    text-align: center;
+    background: rgba(212, 186, 186, 0.103);
+    border-radius: 5px; 
+}
+#conocenosFoto{
+    position: absolute;
+    left: 300px;
+    top: 1551px;
+    padding-bottom: 5.5rem;
+
+}
+#linea4{
+    position: absolute;
+    width: 149px;
+    height: 0px;
+    left: 302px;
+    top: 70px;
+    border: 1px solid gold;
+}
+#btn-Conocenos{
+    position: absolute;
+    width: 138px;
+    height: 22px;
+    left: 280px;
+    top: 178px;
+    text-align: center;
+    padding: 10px 30px;
+    background: #FFEF3E;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+}

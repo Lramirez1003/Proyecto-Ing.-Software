@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/adminVehiculos.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
+    <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
@@ -111,13 +112,17 @@ top: 0px;">Agregar cliente</h4>
 </div>
 
 <table id="t01"  >   
+
+    <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Telefono</th>
-      <th>Licencia</th>
-      <th>Correo</th>
-      <th></th>
+      <th data-tsorter="input-text">Nombre</th>
+      <th data-tsorter="input-text">Telefono</th>
+      <th data-tsorter="input-text">Licencia</th>
+      <th data-tsorter="input-text">Correo</th>
+      
     </tr>
+    </thead>
+    <tbody>
     @foreach($clientes as $cliente)
     <tr>
       <td>{{$cliente->Nombre}}</td>
@@ -134,10 +139,17 @@ top: 0px;">Agregar cliente</h4>
       </td>
     </tr>
     @endforeach
-
-
+    </tbody>
 
   </table>
+
+  <script type="text/javascript">
+    function init() {
+  var sorter = tsorter.create('t01');
+}
+  
+  window.onload = init;
+</script>
 
     @include('sweetalert::alert')
 

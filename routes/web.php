@@ -13,10 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  [
+    'uses'=>'App\Http\Controllers\WelcomeController@index',
+    'as'=>'welcome.index'
+    ]);
 
+Route::get('/Nosotros',[
+    'uses'=>'App\Http\Controllers\AboutUs@index',
+    'as'=>'AboutUs.index'
+    ]);
+
+Route::get('/Aprender',[
+        'uses'=>'App\Http\Controllers\Learn@index',
+        'as'=>'Learn.index'
+        ]);
 
 
 

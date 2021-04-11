@@ -1,0 +1,84 @@
+@import url(About.css);
+/* Header */
+
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-around;
+    text-align: right
+    
+}
+.nav-menu{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+    
+}
+.nav-registro{
+    display: inline-block;
+    color:black;
+    background: gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.nav-iniciarsesion{
+    display: inline-block;
+    color:black;
+    border: 2px solid gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-menu:hover{
+    background: gold;
+    border-radius: 5px;
+}
+.nav-iniciarsesion:hover{
+    background: gold;
+    border-radius: 5px;
+}
+.nav-registro:hover{
+    background: #fff;
+    border-radius: 5px;  
+}
+
+.col-md-6 wrap-about ftco-animate{
+    background: gold;
+}
+
+.sobrenosotros{
+    background: gold;
+}
+
+/* Footer */
+footer{
+  position: fixed;
+  left: 0;
+  bottom:0%;
+  width: 100%;
+  background: #575400;
+
+  
+
+  color: white;
+  text-align: center;
+}

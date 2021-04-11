@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/adminVehiculos.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
+    <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
@@ -68,38 +69,77 @@ top: 25px;">
 left: 80px;
 top: 10px;">Agregar renta</h4>
     </a>
-    <!--    FORMULARIO         -->
+    <!--    TABLA        -->
 
 
-<table id="t01"  >   
+<table id="t01"  >  
+    <thead> 
     <tr>
-      <th>Cliente</th>
-      <th>Vehiculo</th>
-      <th>Fecha de salida</th>
-      <th>Fecha de entrada</th>
-      <th></th>
+      <th data-tsorter="input-text">Cliente</th>
+      <th data-tsorter="input-text">Vehiculo</th>
+      <th >Activa</th>
+      <th data-tsorter="input-text">Fecha de salida</th>
+      <th data-tsorter="input-text">Fecha de entrada</th>
+    
+      
     </tr>
+</thead>
+<tbody>
     @foreach ($rentas as $renta)
         
    
     <tr>
       <td>{{$renta->cliente->Nombre ?? ''}}</td>
       <td>{{$renta->vehiculo->Nombre ?? ''}}</td>
+      <td>{{$renta->Activa ?? ''}}</td>
       <td>{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
       <td>{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
       <td>
         <form action="{{route('renta.delete',$renta->id)}}" method="post">
             @method('delete')
             @csrf
-            <button type="submit" class="btn-borrar" >Borrar</button>
+            <button type="submit" class="btn-borrar" >Eliminar</button>
             </form>
       </td>
     </tr>
-    
-
+     
 
     @endforeach
+</tbody>
   </table>
+  {{--@foreach ($rentas as $renta)
+    <div class="relleno">
+        <img src="{{asset('storage/images/'. $renta->vehiculo->FotoName) }}" alt="car" style="
+        width: 311px;
+        height: 219px;
+        border-radius: 5px;
+        " >
+        <h4 id="nombreCar">{{$renta->vehiculo->Nombre ?? ''}}</h4>
+        <p id="tipodeCar">{{$renta->vehiculo->Tipo ?? ''}}</p>
+        <p id="nPasajeros">{{$renta->vehiculo->N_Pasajeros ?? ''}}</p>
+        <p id="precioDia"> <b>{{$renta->vehiculo->Precio ?? ''}}</b>  por dia </p>
+        <div id="fechaI">    
+            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</p> 
+        </div>
+        <img src="images/iconoflechaabajo.png" alt="flecha" id="flechaFecha" >
+        <div id="fechaF">    
+            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</p> 
+        </div>
+        <div id="bloqueCliente" >
+            <p id="nombreClientee" > {{$renta->cliente->Nombre ?? ''}} </p>
+
+        </div>
+        
+    </div>
+    @endforeach--}}
+    <script type="text/javascript">
+        function init() {
+      var sorter = tsorter.create('t01');
+  }
+      
+      window.onload = init;
+    </script>
+
 
     @include('sweetalert::alert')
 
