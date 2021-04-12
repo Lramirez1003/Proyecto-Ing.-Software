@@ -77,7 +77,7 @@ top: 10px;">Agregar renta</h4>
     <tr>
       <th data-tsorter="input-text">Cliente</th>
       <th data-tsorter="input-text">Vehiculo</th>
-      <th >Activa</th>
+      <th data-tsorter="numeric" > Precio Total</th>
       <th data-tsorter="input-text">Fecha de salida</th>
       <th data-tsorter="input-text">Fecha de entrada</th>
     
@@ -91,7 +91,7 @@ top: 10px;">Agregar renta</h4>
     <tr>
       <td>{{$renta->cliente->Nombre ?? ''}}</td>
       <td>{{$renta->vehiculo->Nombre ?? ''}}</td>
-      <td>{{$renta->Activa ?? ''}}</td>
+      <td>{{$renta->precio_total ?? ''}}</td>
       <td>{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
       <td>{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
       <td>

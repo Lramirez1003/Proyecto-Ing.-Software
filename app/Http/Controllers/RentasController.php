@@ -65,8 +65,8 @@ class RentasController extends Controller
 
         $renta= new Renta();
         $renta->cliente= $request->input('cliente_id');
-
         $renta->vehiculo= $request->input('vehiculo_id');
+        $renta->precio_total=$request->input('precio_total');
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
 
@@ -117,6 +117,7 @@ class RentasController extends Controller
         $renta = Renta::find($id);
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
+        $renta->precio_total=$request->input('precio_total');
         $renta->update();
 
         return redirect()->route('renta.index');

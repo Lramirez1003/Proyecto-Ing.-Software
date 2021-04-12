@@ -74,7 +74,10 @@
             <input type="date" name="fecha_fin" id="fecha_fin" value="{{$renta->fecha_fin}}" >
             </div>
 
-    
+            <div class="group">
+                <input class="inputTexto" type="text" name="precio_total" value="{{$renta->precio_total}}"><span class="highlight"></span><span class="bar"></span>
+                <label class="labelTexto">Precio total:</label>
+            </div>
     
              
 
