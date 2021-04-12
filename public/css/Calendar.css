@@ -1,0 +1,267 @@
+@import url(calendario.html);
+
+/* Header */
+
+.administrarvLOGO{
+    flex:1 1 auto;
+}
+.logo{
+    flex:1 1 auto;
+}
+
+nav{
+
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: gold;
+    display: flex;
+    background: #fff;
+    padding: 10px 0;
+    justify-content: space-evenly;
+
+
+}
+.administrarv{
+    display: inline;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+
+}
+.nav-registro{
+    display: inline-block;
+    color:black;
+    background: gold;
+    border-radius: 5px;
+    margin-right: 25px;
+    padding: 10px 30px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.administrarv:hover{
+    background: gold;
+    border-radius: 5px;
+}
+
+.circulop {       
+
+    width: 53px;
+    height: 53px;
+    left: 1425px;
+    top: 8px;
+    display: inline;
+    padding: 0px 0px;
+    text-decoration: none;
+    margin: auto;
+    /*border: 2px solid #FFA751;*/
+    background: url("../admin 1.png");
+    border-radius: 500px;
+
+}
+.strike {
+  text-decoration: line-through;
+}
+
+/* MENU DROPDOWN */
+.dropdown{
+  float: left;
+  overflow: hidden;
+  display: inline;
+  color: black;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin: auto;
+  }
+  .dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+  .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+
+td{
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.todo-input{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+
+.todoTable-block{
+  margin-top: 1rem;
+}
+
+.pagination-pages{
+  text-align: right;
+}
+
+.pagination-pages > * {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.material-icons{
+  cursor: pointer;
+}
+
+::-ms-input-placeholder{
+  color: black;
+}
+
+::-webkit-input-placeholder{
+  color: black;
+}
+
+::placeholder{
+  color: black;
+}
+
+input {
+  color: black;
+}
+
+h3 {
+  color: black;
+  font-family: 'Times New Roman', cursive;
+}
+
+
+body{
+
+    font-family: 'Inter',sans-serif;
+}
+
+.todo-block{
+  border: 1px solid gold;
+  padding: 1rem;
+  border-radius: 20px;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  /* pantallas pequenas */
+  #todoTable, .todo-calendar{
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* pantallas grandes */
+  .todo-grid-parent{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 1rem;
+  }
+
+  #calendar{
+    position: sticky;
+    top: 0;
+  }
+}
+
+.todo-overlay{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100vw);
+  transition: transform 250ms;
+  z-index: 2;
+}
+
+.todo-modal{
+  min-width: 50vw;
+  height: 50vh;
+  background-color: white;
+}
+
+.todo-modal-close-btn{
+  background-color: red;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+}
+
+.slidedIntoView {
+  transform: translateX(0);
+  transition: transform 650ms;
+}
+
+#todoTable tr:nth-child(even) {
+  background-color: white;
+}
+
+button{
+  background-color: #F1EAE8;
+  color: black;
+  border: 1px outset black;
+}
+
+button:active{
+  border: 1px inset #ed6a5e;
+}
+
+button:hover{
+  background-color: gold;
+}
+
+.chevron{
+  transform: translateY(0.4rem);
+}
+
+.itemsPerPage{
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer{
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}

@@ -15,7 +15,7 @@
     
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
-    <title>Ureña Rent-Car</title>
+    <title>URC | Vehiculos</title>
 </head>
 <header>
     <nav>
@@ -31,7 +31,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Calendario
+        <a href="{{route('Calendario.index')}}" class = "administrarv ">Calendario
             <img src="images/iconocalendar.png" width="15px" height="18px">
 
         </a>

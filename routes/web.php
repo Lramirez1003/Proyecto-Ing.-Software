@@ -18,22 +18,29 @@ Route::get('/',  [
     'as'=>'welcome.index'
     ]);
 
+    //About us \ Nosotros
 Route::get('/Nosotros',[
-    'uses'=>'App\Http\Controllers\AboutUs@index',
+    'uses'=>'App\Http\Controllers\AboutUsController@index',
     'as'=>'AboutUs.index'
     ]);
-
+    //  Learn \ Aprender
 Route::get('/Aprender',[
-        'uses'=>'App\Http\Controllers\Learn@index',
+        'uses'=>'App\Http\Controllers\LearnController@index',
         'as'=>'Learn.index'
         ]);
 
+    //  Learn \ Aprender
+    Route::get('/Calendario',[
+        'uses'=>'App\Http\Controllers\CalendarioController@index',
+        'as'=>'Calendario.index'
+        ]);
 
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 //Vehiculos
 
@@ -125,6 +132,3 @@ Route::delete('/Renta/{renta}',[
 ]);
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

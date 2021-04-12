@@ -5,6 +5,7 @@
     <title>Ureña Santana Rent Car</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/adminHomepage.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
     <nav>
@@ -16,7 +17,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{ route('rentas.index') }}" class = "administrarv ">Rentas
             <img src="images/carnolmal.png" width="20px" height="16px">
 
         </a>
@@ -27,11 +28,12 @@
         </a>
 
 
-        <a href="{{route('cliente.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
+                
                 <a href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -46,13 +48,13 @@
 
     </nav>
 </header>
-<body>
+<body >
     <h1 id="hola">
         Hola<nobr>   {{ Auth::user()->name }}!
     </h1>
     <p>Observe el calendario, las rentas, administra tus vehiculos  mira quienes forman parte de la comunidad</p>
     <!-- CALENDARIO-->
-<a href="#" id="rectangulo1">
+<a href="{{route('Calendario.index')}}" id="rectangulo1">
 
     <div id="texto1">
         Calendario
@@ -87,7 +89,7 @@
     </a>
 
     <!-- Mirar las rentas activa -->
-    <a href="#" id="rectangulo4">
+    <a href="{{ route('rentas.index') }}" id="rectangulo4">
         <div id="texto4">
             Mira las rentas activas
         </div>

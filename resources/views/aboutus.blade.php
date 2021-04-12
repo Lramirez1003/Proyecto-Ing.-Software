@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="{{asset('css/aos.css')}}">
 
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 
     <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}">
@@ -29,7 +29,7 @@
 
   <header>
   <nav>
-      <a href=""  style="position: absolute; left: 20px;"><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
+      <a href="{{route('welcome.index')}}"  style="position: absolute; left: 20px;"><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
       <a href="#" class = "nav-menu ">Rentar</a>
       <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
