@@ -106,7 +106,7 @@
                 <h2 class="h2Bloques">Conocenos</h2>
                 <div id="linea4"></div>
                 <p class="textBloques">Mira en quienes nos hemos convertido a traves de los años</p>
-                <a href="{{route('AboutUs.index')}}" id="btn-Conocenos">Conócenos</a>
+                <a href="{{asset('about.html')}}" id="btn-Conocenos">Conócenos</a>
 
              </section>
 
