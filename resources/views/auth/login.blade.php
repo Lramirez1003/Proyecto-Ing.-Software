@@ -19,7 +19,7 @@
       <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+      <!--<a href="{{route('register')}}" class = "nav-registro">Regístrate</a>-->
   </nav>
 </header>
 <body style="background-color: white;">
@@ -41,7 +41,7 @@
   <button type="submit" class="button buttonGold">{{ __('Entrar') }}
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-  <p>No tienes cuenta? <a href="{{route('register')}}" class = "abuenogracias">Registrate</a></p>
+  <p>No tienes cuenta? <a href="#" class = "abuenogracias">Registrate</a></p>
   <p><a href="{{route('password.request')}}" class="resetP">Se te olvido la contraseña?</a></p>
 </form>
 </body>

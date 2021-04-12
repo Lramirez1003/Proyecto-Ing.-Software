@@ -13,7 +13,7 @@
     <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
     <a href="#" class = "nav-menu ">Aprender</a>
     <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-    <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+    <!--<a href="{{route('register')}}" class = "nav-registro">Regístrate</a>-->
 </nav>
 <body>
 <h1 style="position: absolute;
