@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ureña Santana Rent Car</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/adminHomepage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/adminHomepag.css')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
@@ -68,11 +68,11 @@
     <!-- MENSAJES-->
     <a href="#" id="rectangulo2">
         <div id="texto2">
-            Mensajes
+            Correo Electrónico
         </div>
         <div id="linea9"></div>
         <div id="subtexto2">Revisa lo que te han escrito tus clientes</div>
-        <img id="mensajesicono" src="images/iconomensajes.png" alt="Italian Trulli" width="38.35" height="38.43">
+        <img id="mensajesicono" src="{{asset('images/mailicono.png')}}" alt="Italian Trulli" width="38.35" height="38.43">
     
     </a>
 
