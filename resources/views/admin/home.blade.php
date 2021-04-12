@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ureña Santana Rent Car</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/adminHomepag.css')}}">
+    <link rel="stylesheet" href="{{asset('css/adminHomepa.css')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
@@ -66,7 +66,7 @@
 </a>
 
     <!-- MENSAJES-->
-    <a href="#" id="rectangulo2">
+    <a href="https://www.google.com/intl/es/gmail/about/" id="rectangulo2">
         <div id="texto2">
             Correo Electrónico
         </div>
