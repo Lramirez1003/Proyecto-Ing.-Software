@@ -17,10 +17,10 @@
 </head>
 <header>
   <nav>
-      <a href="Homepage.html" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
+      <a href="#" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
       <button class="nav-button"onclick="accion()" >Menú</button>
       <a href="#" class = "nav-menu ">Rentar</a>
-      <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
+      <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
       <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>

@@ -15,10 +15,10 @@
 
 <header>
   <nav>
-      <a href="#" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
+      <a href="{{route('welcome.index')}}" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
       <a href="#" class = "nav-menu ">Rentar</a>
-      <a href="#" class = "nav-menu ">Nosotros</a>
-      <a href="#" class = "nav-menu ">Aprender</a>
+      <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
+      <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
       <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
   </nav>
