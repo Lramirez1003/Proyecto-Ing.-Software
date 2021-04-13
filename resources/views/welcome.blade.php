@@ -17,13 +17,13 @@
 </head>
 <header>
   <nav>
-      <a href="Homepage.html" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
+      <a href="#" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
       <button class="nav-button"onclick="accion()" >Menú</button>
       <a href="#" class = "nav-menu ">Rentar</a>
-      <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
+      <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+      <!--<a href="{{route('register')}}" class = "nav-registro">Regístrate</a>-->
   </nav>
 
 <body>
@@ -106,7 +106,7 @@
                 <h2 class="h2Bloques">Conocenos</h2>
                 <div id="linea4"></div>
                 <p class="textBloques">Mira en quienes nos hemos convertido a traves de los años</p>
-                <a href="{{route('AboutUs.index')}}" id="btn-Conocenos">Conócenos</a>
+                <a href="{{asset('about.html')}}" id="btn-Conocenos">Conócenos</a>
 
              </section>
 

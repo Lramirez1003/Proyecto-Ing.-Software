@@ -28,7 +28,7 @@
         </a>
 
 
-        <!-- <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a> -->
+        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
@@ -66,13 +66,13 @@
 </a>
 
     <!-- MENSAJES-->
-    <a href="https://www.google.com" id="rectangulo2">
+    <a href="#" id="rectangulo2">
         <div id="texto2">
-            Correo electronico
+            Mensajes
         </div>
         <div id="linea9"></div>
         <div id="subtexto2">Revisa lo que te han escrito tus clientes</div>
-        <img id="mensajesicono" src="images/mailicono.png" alt="Italian Trulli" width="38.35" height="38.43">
+        <img id="mensajesicono" src="images/iconomensajes.png" alt="Italian Trulli" width="38.35" height="38.43">
 
     </a>
 
@@ -91,10 +91,10 @@
     <!-- Mirar las rentas activa -->
     <a href="{{ route('rentas.index') }}" id="rectangulo4">
         <div id="texto4">
-            Rentas y Perfil
+            Mira las rentas activas
         </div>
         <div id="linea11"></div>
-        <div id="subtexto4">Cheque las rentas pendientes y pasadas y tu perfil</div>
+        <div id="subtexto4">Cheque las rentas pendientes y pasadas</div>
         <img id="caricono" src="images/iconocar.png" alt="Italian Trulli" width="34.67" height="52" >
 
     </a>

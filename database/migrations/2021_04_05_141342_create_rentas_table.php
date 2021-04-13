@@ -17,7 +17,7 @@ class CreateRentasTable extends Migration
             $table->id();
             $table->string('Cliente');
             $table->string('Vehiculo');
-            $table->date('fecha_inicio')->default('');
+            $table->date('fecha_inicio')->nullable();
             $table->date('fecha_fin')->nullable();
             $table->decimal('precio_total', 15, 2)->nullable();
             $table->timestamps();

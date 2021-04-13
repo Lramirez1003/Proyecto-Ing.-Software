@@ -129,6 +129,11 @@ top: 0px;">Agregar renta</h4>
             <input type="date" name="fecha_fin" id="fecha_fin" required>
         </div>
 
+        <div class="group">
+            <input class="inputTexto" type="text" name="precio_total" required><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Precio total:</label>
+        </div>
+
          
          <a href="{{ url()->previous() }}"  class="button" style="color: orange;border: 2px solid;
          border-radius: 5px; text-decoration: none; ">Cancelar
