@@ -28,13 +28,13 @@
         </a>
 
 
-        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <!-- <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a> -->
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                
-                <a href="{{ route('logout') }}" 
+
+                <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                  <img src="{{ asset('images/iconologout.png')}}" width="14px" height="14.44px"> Cerrar Sesión</a>
@@ -62,18 +62,18 @@
     <div id="linea8"></div>
     <div id="subtexto1">Chequea las fechas de tus rentas</div>
     <img id="calendaricono" src="{{ asset('images/iconocalendar.png')}}" alt="Italian Trulli" width="39.6" height="44">
-    
+
 </a>
 
     <!-- MENSAJES-->
-    <a href="#" id="rectangulo2">
+    <a href="https://www.google.com" id="rectangulo2">
         <div id="texto2">
-            Mensajes
+            Correo electronico
         </div>
         <div id="linea9"></div>
         <div id="subtexto2">Revisa lo que te han escrito tus clientes</div>
-        <img id="mensajesicono" src="images/iconomensajes.png" alt="Italian Trulli" width="38.35" height="38.43">
-    
+        <img id="mensajesicono" src="images/mailicono.png" alt="Italian Trulli" width="38.35" height="38.43">
+
     </a>
 
 <!-- ADMINISTRAR VEHICULO-->
@@ -91,10 +91,10 @@
     <!-- Mirar las rentas activa -->
     <a href="{{ route('rentas.index') }}" id="rectangulo4">
         <div id="texto4">
-            Mira las rentas activas
+            Rentas y Perfil
         </div>
         <div id="linea11"></div>
-        <div id="subtexto4">Cheque las rentas pendientes y pasadas</div>
+        <div id="subtexto4">Cheque las rentas pendientes y pasadas y tu perfil</div>
         <img id="caricono" src="images/iconocar.png" alt="Italian Trulli" width="34.67" height="52" >
 
     </a>

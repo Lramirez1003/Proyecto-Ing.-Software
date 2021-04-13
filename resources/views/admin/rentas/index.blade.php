@@ -34,13 +34,13 @@
 
         </a>
 
-        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                
-                <a href="{{ route('logout') }}" 
+
+                <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                  <img src="{{ asset('images/iconologout.png')}}" width="14px" height="14.44px"> Cerrar Sesión</a>
@@ -70,24 +70,24 @@ left: 80px;
 top: 10px;">Agregar renta</h4>
     </a>
     <!--    TABLA        -->
+<a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
-
-<table id="t01"  >  
-    <thead> 
+<table id="t01"  >
+    <thead>
     <tr>
       <th data-tsorter="input-text">Cliente</th>
       <th data-tsorter="input-text">Vehiculo</th>
       <th >Activa</th>
       <th data-tsorter="input-text">Fecha de salida</th>
       <th data-tsorter="input-text">Fecha de entrada</th>
-    
-      
+
+
     </tr>
 </thead>
 <tbody>
     @foreach ($rentas as $renta)
-        
-   
+
+
     <tr>
       <td>{{$renta->cliente->Nombre ?? ''}}</td>
       <td>{{$renta->vehiculo->Nombre ?? ''}}</td>
@@ -102,7 +102,7 @@ top: 10px;">Agregar renta</h4>
             </form>
       </td>
     </tr>
-     
+
 
     @endforeach
 </tbody>
@@ -118,25 +118,25 @@ top: 10px;">Agregar renta</h4>
         <p id="tipodeCar">{{$renta->vehiculo->Tipo ?? ''}}</p>
         <p id="nPasajeros">{{$renta->vehiculo->N_Pasajeros ?? ''}}</p>
         <p id="precioDia"> <b>{{$renta->vehiculo->Precio ?? ''}}</b>  por dia </p>
-        <div id="fechaI">    
-            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</p> 
+        <div id="fechaI">
+            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</p>
         </div>
         <img src="images/iconoflechaabajo.png" alt="flecha" id="flechaFecha" >
-        <div id="fechaF">    
-            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</p> 
+        <div id="fechaF">
+            <p id="textoFecha">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</p>
         </div>
         <div id="bloqueCliente" >
             <p id="nombreClientee" > {{$renta->cliente->Nombre ?? ''}} </p>
 
         </div>
-        
+
     </div>
     @endforeach--}}
     <script type="text/javascript">
         function init() {
       var sorter = tsorter.create('t01');
   }
-      
+
       window.onload = init;
     </script>
 
