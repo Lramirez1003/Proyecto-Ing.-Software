@@ -111,10 +111,10 @@ top: 10px;">Agregar renta</h4>
   <br>
   <br>
   <br>
-  <h2 style="position: absolute; top: 66%; left: 20%; ">Rentas creadas por usuarios</h2>
+  <h2 style="position: absolute; top: 46%; left: 20%; ">Rentas creadas por usuarios</h2>
 
   <!-- <h2 style="position: relative; top: 36%; left: 20%; ">Rentas creadas por usuarios</h2> -->
-  <table id="t01"  >
+  <table id="t01" style="top: 56px;" >
     <thead>
     <tr>
       <th data-tsorter="input-text">Cliente</th>
