@@ -12,7 +12,7 @@
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
     <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
 
-    
+
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>URC | Vehiculos</title>
@@ -41,7 +41,7 @@
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
             <div class="dropdown-content">
-                <a href="{{ route('logout') }}" 
+                <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                  <img src="{{ asset('images/iconologout.png')}}" width="14px" height="14.44px"> Cerrar Sesión</a>
@@ -132,24 +132,11 @@ top: 0px;">Agregar Vehiculos</h4>
     </form>
 </div>
 
-    <button class="btn-popup" onclick="openForm()" style="position: absolute;
-width: 257px;
-height: 64px;
-left: 1000px;
-">
-        <img src="{{ asset('images/estadisticasicono.png')}}" style="position: absolute;
-width: 26px;
-height: 26px;
-left:35px;
-top: 15px;">
-        <h4 style="position: absolute;
-left: 80px;
-top: 0px;">Ver estadisticas</h4>
-    </button>
+
 <table id="t01" style="
     cursor: pointer;
-    ">   
-    <thead>  
+    ">
+    <thead>
     <tr>
       <th>Foto</th>
       <th data-tsorter="input-text">Nombre</th>
@@ -157,7 +144,7 @@ top: 0px;">Ver estadisticas</h4>
       <th data-tsorter="input-text">Tipo</th>
       <th data-tsorter="numeric">Precio/hora</th>
       <th data-tsorter="numeric">N. pasajeros</th>
-      
+
     </tr>
     </thead>
     <tbody>
@@ -191,7 +178,7 @@ top: 0px;">Ver estadisticas</h4>
       function init() {
     var sorter = tsorter.create('t01');
 }
-    
+
     window.onload = init;
   </script>
 
