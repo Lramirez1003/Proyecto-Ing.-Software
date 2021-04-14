@@ -23,7 +23,7 @@
             <img src="images/iconocar.png" width="11.45px" height="14px">
         </a>
 
-        <a href="#" class = "administrarv ">Aprender
+        <a href="{{route('Learn.index')}}" class = "administrarv ">Aprender
          <img src="images/iconoaprender.png" width="13px" height="14px">
         </a>
 
