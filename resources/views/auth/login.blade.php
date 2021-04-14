@@ -19,7 +19,7 @@
       <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      <!--<a href="{{route('register')}}" class = "nav-registro">Regístrate</a>-->
+      <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
   </nav>
 </header>
 <body style="background-color: white;">
@@ -28,7 +28,7 @@
   <h1>Inicia Sesion</h1>
   <a href="#"class="header3 "><h3>Vuelve donde te quedaste</h3></a>
 </hgroup>
-<form method="POST" action="{{ route('login') }}">
+<form  class="formulario" method="POST" action="{{ route('login') }}">
     @csrf
   <div class="group">
     <input id="email" value="{{old('email') }}" name="email" type="email"><span class="highlight"></span><span class="bar"></span>

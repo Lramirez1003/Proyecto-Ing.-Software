@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Inter',sans-serif;
-	background: #eee;
+	background: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +27,7 @@ h3{
 	 text-decoration: underline;
  }
 
-form {
+.formulario {
 	width: 380px;
 	margin: 4em auto;
 	padding: 3em 2em 2em 2em;

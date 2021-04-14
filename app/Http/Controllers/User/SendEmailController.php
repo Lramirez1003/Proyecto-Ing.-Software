@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use Auth;
 
-class HomeController extends Controller
+
+class SendEmailController extends Controller
 {
-    /**
+        /**
      * Create a new controller instance.
      *
      * @return void
@@ -29,9 +30,7 @@ class HomeController extends Controller
         {
             return redirect()->route('/');
         }
-  
 
-
-        return view('admin.home');
+        return view('user.email');
     }
 }

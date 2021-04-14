@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ureña Santana Rent Car</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/adminHomepage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/adminHomepa.css')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
@@ -28,7 +28,8 @@
         </a>
 
 
-        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="{{route('clientes.index')}}" class = "circulop"> 
+            <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
