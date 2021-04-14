@@ -37,7 +37,7 @@ Route::get('/Aprender',[
     Route::get('/Calendario',[
         'uses'=>'App\Http\Controllers\CalendarioController@index',
         'as'=>'Calendario.index'
-        ]);
+        ])->middleware('can:manage-users');
 
     Route::get('/Bienvenido',[
         'uses'=>'App\Http\Controllers\User\HomeController@index',
@@ -63,54 +63,54 @@ Route::resource('users', 'App\Http\Controllers\UsersController',['except'=>['sho
 Route::get('/vehiculos', [
     'uses'=>'App\Http\Controllers\VehiculosController@index',
     'as'=>'vehiculos.index'
-]);
+])->middleware('can:manage-users');
 
 Route::post('/create',[
     'uses'=>'App\Http\Controllers\VehiculosController@create',
     'as'=>'vehiculos.create'
-]);
+])->middleware('can:manage-users');
 
 Route::get('/vehiculos/{vehiculo}/edit',[
     'uses'=>'App\Http\Controllers\VehiculosController@edit',
     'as'=>'vehiculos.edit'
-]);
+])->middleware('can:manage-users');
 
 Route::post('/vehiculos/{vehiculo}',[
     'uses'=>'App\Http\Controllers\VehiculosController@update',
     'as'=>'vehiculos.update'
-]);
+])->middleware('can:manage-users');
 
 Route::delete('/vehiculos/{vehiculo}',[
     'uses'=>'App\Http\Controllers\VehiculosController@destroy',
     'as'=>'vehiculos.delete'
-]);
+])->middleware('can:manage-users');
 
 //Cliente
 Route::get('/Clientes', [
     'uses'=>'App\Http\Controllers\ClienteController@index',
     'as'=>'clientes.index'
-]);
+])->middleware('can:manage-users');
 
 
 Route::post('/Agregar cliente',[
     'uses'=>'App\Http\Controllers\ClienteController@create',
     'as'=>'cliente.create'
-]);
+])->middleware('can:manage-users');
 
 Route::get('/Cliente/{cliente}/edit',[
     'uses'=>'App\Http\Controllers\ClienteController@edit',
     'as'=>'cliente.edit'
-]);
+])->middleware('can:manage-users');
 
 Route::post('/Cliente/{cliente}',[
     'uses'=>'App\Http\Controllers\ClienteController@update',
     'as'=>'cliente.update'
-]);
+])->middleware('can:manage-users');
 
 Route::delete('/Cliente/{cliente}',[
     'uses'=>'App\Http\Controllers\ClienteController@destroy',
     'as'=>'cliente.delete'
-]);
+])->middleware('can:manage-users');
 
 //Renta
 
@@ -119,32 +119,32 @@ Route::delete('/Cliente/{cliente}',[
 Route::get('/Rentas', [
     'uses'=>'App\Http\Controllers\RentasController@index',
     'as'=>'rentas.index'
-]);
+])->middleware('can:manage-users');
 
 
 Route::get('/AgregarRenta',[
     'uses'=>'App\Http\Controllers\RentasController@create',
     'as'=>'renta.create'
-]);
+])->middleware('can:manage-users');
 
 Route::post('/pruebaStore',[
     'uses'=>'App\Http\Controllers\RentasController@store',
     'as'=>'renta.store'
-]);
+])->middleware('can:manage-users');
 
 Route::get('/Renta/{renta}/edit',[
     'uses'=>'App\Http\Controllers\RentasController@edit',
     'as'=>'renta.edit'
-]);
+])->middleware('can:manage-users');
 
 Route::post('/Renta/{renta}',[
     'uses'=>'App\Http\Controllers\RentasController@update',
     'as'=>'renta.update'
-]);
+])->middleware('can:manage-users');
 
 Route::delete('/Renta/{renta}',[
     'uses'=>'App\Http\Controllers\RentasController@destroy',
     'as'=>'renta.delete'
-]);
+])->middleware('can:manage-users');
 
 
