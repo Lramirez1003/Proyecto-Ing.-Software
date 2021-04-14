@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Ureña Rent-Car</title>
-    <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Log-in.css') }}">
     <script type="text/javascript"src={{ asset('js/Log-in.js') }}></script>    
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>

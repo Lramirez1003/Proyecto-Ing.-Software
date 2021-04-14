@@ -38,17 +38,22 @@ Route::get('/Aprender',[
         'uses'=>'App\Http\Controllers\CalendarioController@index',
         'as'=>'Calendario.index'
         ])->middleware('can:manage-users');
-
+    //Welcome del usuario logeado
     Route::get('/Bienvenido',[
         'uses'=>'App\Http\Controllers\User\HomeController@index',
         'as'=>'homec.index'
+
+    ]);
+    Route::get('/Explorar',[
+        'uses'=>'App\Http\Controllers\User\ExplorarController@index',
+        'as'=>'explorar.index'
 
     ]);
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('can:manage-users')->name('home');
 
 //Usuarios
 
@@ -147,4 +152,34 @@ Route::delete('/Renta/{renta}',[
     'as'=>'renta.delete'
 ])->middleware('can:manage-users');
 
+// RENTAS CLIENTEES
+Route::get('/TusRentas', [
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@index',
+    'as'=>'rentasC.index'
+]);
 
+
+Route::get('/AgregaRenta',[
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@create',
+    'as'=>'rentaC.create'
+]);
+
+Route::post('/rentaStore',[
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@store',
+    'as'=>'rentaC.store'
+]);
+
+Route::get('/TuRenta/{renta}/edit',[
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@edit',
+    'as'=>'rentaC.edit'
+]);
+
+Route::post('/TuRenta/{renta}',[
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@update',
+    'as'=>'renta.update'
+]);
+
+Route::delete('/TuRenta/{renta}',[
+    'uses'=>'App\Http\Controllers\User\RentasClientesController@destroy',
+    'as'=>'rentaC.delete'
+]);

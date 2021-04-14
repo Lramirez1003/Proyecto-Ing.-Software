@@ -83,14 +83,14 @@
 
         <!-- CARRUSEL DE VEHICULOS -->
         <section class="carruselBorde">
-            <a href="#" id="btn-VerTodos">Ver todos</a>
+            <a href="{{route('explorar.index')}}" id="btn-VerTodos">Ver todos</a>
             <h2 class="h2Bloques">Explora</h2>
             <div id="linea2"></div>
             <p class="textBloques">Explora los diferentes tipos de carros</p>
             <div class="owl-carousel owl-theme">
                <@foreach ($vehiculoss as $vehiculo)
 
-               <a href="#"class="nombresVehiculos"> <img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt=" " width="206" height="125">{{$vehiculo->Nombre}} <b>{{$vehiculo->N_pasajeros}}</b>
+               <a href="{{route('explorar.index')}}"class="nombresVehiculos"> <img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt=" " width="206" height="125">{{$vehiculo->Nombre}} <b>{{$vehiculo->N_pasajeros}}</b>
                    <i class="material-icons">person</i></a>
                    @endforeach
             </div>
