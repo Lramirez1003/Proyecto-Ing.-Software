@@ -28,12 +28,12 @@
       <div class="dropdown">
         <img src="{{asset('images/admin 1.png')}}" alt="A">
         <div class="dropdown-content">
-        
+
         <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
         <a href="#"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
-        
+
         <a href="{{route('logout')}}" onclick="event.preventDefault();
-        document.getElementById('logout-form').submit();"> 
+        document.getElementById('logout-form').submit();">
             <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -48,7 +48,7 @@
       @if (Route::has('register'))
         <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
       @endif
-        
+
       @endauth
       @endif
 
@@ -75,7 +75,7 @@
                 <h4 class="header4"> Selecciona un tipo de vehiculo</h4>
                 <button class="btn-Intermedio"><i class="fa fa-truck"></i> <br/> Intermedio</button>
                 <button class="btn-Compacto"><i class="fa fa-car"></i><br/>Compacto</button>
-                <div><a href="#" class="btn-seleccionar">Seleccionar</a></div>
+                <div><a href="{{route('rentasC.index')}}" class="btn-seleccionar">Seleccionar</a></div>
             </div>
 
             <div class="elantraBanner"><img src="images/bannerlogoafuera.JPG" alt="Elantra" width="605" height="398"></div>
