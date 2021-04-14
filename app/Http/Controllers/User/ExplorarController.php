@@ -14,10 +14,7 @@ class ExplorarController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -26,11 +23,6 @@ class ExplorarController extends Controller
      */
     public function index()
     {
-        if (Auth::guest())
-        {
-            return redirect()->route('/');
-        }
-
 
         $vehiculoss=vehiculos::all();
 

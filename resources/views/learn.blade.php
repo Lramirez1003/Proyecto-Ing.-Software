@@ -57,7 +57,7 @@
 
     <nav> 
         <a href="{{route('welcome.index')}}" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
-        <a href="#" class = "nav-menu ">Rentar</a>
+        <a href="{{route('rentasC.index')}}" class = "nav-menu ">Rentar</a>
         <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
         <a href="#" class = "nav-menu ">Aprender</a>
         <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
