@@ -111,7 +111,9 @@ top: 10px;">Agregar renta</h4>
   <br>
   <br>
   <br>
-  <h2 style="position: relative; top: 36%; left: 20%; ">Rentas creadas por usuarios</h2>
+  <h2 style="position: relative; top: 56%; left: 20%; ">Rentas creadas por usuarios</h2>
+
+  <!-- <h2 style="position: relative; top: 36%; left: 20%; ">Rentas creadas por usuarios</h2> -->
   <table id="t01"  >
     <thead>
     <tr>
