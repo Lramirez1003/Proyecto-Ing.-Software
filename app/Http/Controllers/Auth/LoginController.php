@@ -43,7 +43,7 @@ class LoginController extends Controller
     {
 
         if(Auth::user()->hasRole('admin')){
-            $this->redirectTo = route('vehiculos.index');
+            $this->redirectTo = route('home.index');
             return $this->redirectTo;
         }
 
