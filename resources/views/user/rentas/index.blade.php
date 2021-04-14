@@ -81,12 +81,13 @@ top: 230px;
 
 background: #ffde00;
 border-radius: 5px;"></div>
-    <a href="{{route('rentaC.create')}}" class="btn-popup">
+    <a href="{{route('rentaC.create')}}" class="btn-popup" style="background: #ffe53c60;"">
         <img src="{{ asset('images/addicon.png')}}" style="position: absolute;
 width: 31px;
 height: 31px;
 left: 25px;
-top: 25px;">
+top: 25px;
+">
         <h4 style="position: absolute;
 left: 80px;
 top: 10px;">Agregar renta</h4>
@@ -97,10 +98,10 @@ top: 10px;">Agregar renta</h4>
 <table id="t01"  >
     <thead>
     <tr>
-      <th data-tsorter="input-text">Vehiculo</th>
-      <th data-tsorter="numeric" > Precio Total</th>
-      <th data-tsorter="input-text">Fecha de salida</th>
-      <th data-tsorter="input-text">Fecha de entrada</th>
+      <th data-tsorter="input-text"  style="border:1px solid #ffdd0098;background: #ffdd0081;">Vehiculo</th>
+      <th data-tsorter="numeric" style="border:1px solid #ffdd0098;background: #ffdd0081;"> Precio Total</th>
+      <th data-tsorter="input-text" style="border:1px solid #ffdd0098;background: #ffdd0081;">Fecha de salida</th>
+      <th data-tsorter="input-text" style="border:1px solid #ffdd0098;background: #ffdd0081;">Fecha de entrada</th>
 
 
     </tr>
@@ -110,11 +111,11 @@ top: 10px;">Agregar renta</h4>
 
 
     <tr>
-      <td>{{$renta->vehiculo->Nombre ?? ''}}</td>
-      <td>{{$renta->precio_total ?? ''}}</td>
-      <td>{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
-      <td>{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
-      <td>
+      <td style="border:1px solid #ffdd0098;">{{$renta->vehiculo->Nombre ?? ''}}</td>
+      <td style="border:1px solid #ffdd0098;">{{$renta->precio_total ?? ''}}</td>
+      <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
+      <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
+      <td style="border:1px solid #ffdd0098;">
         <form action="{{route('rentaC.delete',$renta->id)}}" method="post">
             @method('delete')
             @csrf
