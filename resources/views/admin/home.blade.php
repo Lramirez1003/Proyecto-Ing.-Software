@@ -28,7 +28,7 @@
         </a>
 
 
-        <a href="{{route('clientes.index')}}" class = "circulop"> 
+        <a href="{{route('clientes.index')}}" class = "circulop">
             <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
@@ -67,9 +67,9 @@
 </a>
 
     <!-- MENSAJES-->
-    <a href="#" id="rectangulo2">
+    <a href="https://outlook.com" id="rectangulo2">
         <div id="texto2">
-            Mensajes
+           Correo Electrónico
         </div>
         <div id="linea9"></div>
         <div id="subtexto2">Revisa lo que te han escrito tus clientes</div>
