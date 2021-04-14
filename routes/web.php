@@ -17,6 +17,10 @@ Route::get('/',  [
     'uses'=>'App\Http\Controllers\WelcomeController@index',
     'as'=>'welcome.index'
     ]);
+Route::get('/EnviarCorreo',  [
+        'uses'=>'App\Http\Controllers\User\SendEmailController@index',
+        'as'=>'email.index'
+        ]);
 
     //About us \ Nosotros
 Route::get('/Nosotros',[
@@ -35,11 +39,23 @@ Route::get('/Aprender',[
         'as'=>'Calendario.index'
         ]);
 
+    Route::get('/Bienvenido',[
+        'uses'=>'App\Http\Controllers\User\HomeController@index',
+        'as'=>'homec.index'
+
+    ]);
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Usuarios
+
+Route::resource('users', 'App\Http\Controllers\UsersController',['except'=>['show','create','store']])->middleware('can:manage-users');
+
+// Perfil
+
 
 
 //Vehiculos

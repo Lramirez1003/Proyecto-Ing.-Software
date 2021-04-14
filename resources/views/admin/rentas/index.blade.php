@@ -33,7 +33,7 @@
             <img src="images/iconocalendar.png" width="15px" height="18px">
 
         </a>
-
+        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
 
         <div class="dropdown">
@@ -70,7 +70,7 @@ left: 80px;
 top: 10px;">Agregar renta</h4>
     </a>
     <!--    TABLA        -->
-<a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+
 
 <table id="t01"  >
     <thead>

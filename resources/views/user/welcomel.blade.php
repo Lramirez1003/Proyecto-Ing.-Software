@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     <title>Ureña Rent-Car</title>
-    <link rel="stylesheet" href="{{asset('css/Homepage.css')}}">
     <link rel="stylesheet" href="{{asset('css/HomepageL.css')}}">
 </head>
 <header>
@@ -23,18 +22,16 @@
       <a href="#" class = "nav-menu ">Rentar</a>
       <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
-      @if (Route::has('login'))
-      @auth
+
       <div class="dropdown">
         <img src="{{asset('images/admin 1.png')}}" alt="A">
         <div class="dropdown-content">
-        
         <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
         <a href="#"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
         
         <a href="{{route('logout')}}" onclick="event.preventDefault();
         document.getElementById('logout-form').submit();"> 
-            <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
+            <img src="images/iconologout.png" width="14px" height="14.44px">Cerrar Sesión</a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
@@ -42,15 +39,6 @@
         </div>
 
      </div>
-
-      @else
-        <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      @if (Route::has('register'))
-        <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
-      @endif
-        
-      @endauth
-      @endif
 
   </nav>
 

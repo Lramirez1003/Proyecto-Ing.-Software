@@ -4,17 +4,71 @@
     <meta charset="UTF-8">
     <title>URC | Aprende</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/registrate.css')}}">
+    <link rel="stylesheet" href="{{asset('css/clienteHOMEPAGE.css')}}">
+    <link rel="stylesheet" href="{{asset('css/Register.css')}}">
+    
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
-<nav>
-    <a href="{{route('welcome.index')}}" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
-    <a href="#" class = "nav-menu ">Rentar</a>
-    <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
-    <a href="#" class = "nav-menu ">Aprender</a>
-    <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-    <!--<a href="{{route('register')}}" class = "nav-registro">Regístrate</a>-->
-</nav>
+<header>
+    @if (Route::has('login'))
+    @auth
+    <nav>
+ 
+        <a href="{{route('welcome.index')}}" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
+        <a href="explorarvehiculos.html" class = "administrarv " >Explorar
+         <!--<i class="material-icons">person</i>-->
+            <img src="images/exploraricon.png" width="15px" height="14px">
+        </a>
+        <a href="step1.html" class = "administrarv " >Rentar
+            <!--<i class="material-icons">person</i>-->
+            <img src="images/iconocar.png" width="11.45px" height="14px">
+        </a>
+
+        <a href="#" class = "administrarv ">Aprender
+         <img src="images/iconoaprender.png" width="13px" height="14px">
+        </a>
+
+        <a href="{{route('email.index')}}" class = "administrarv ">Enviar Correo
+            <img src="images/mailicono.png" width="15px" height="14px">
+         </a>
+
+        <div class="dropdown">
+            <img src="{{asset('images/admin 1.png')}}" alt="A">
+            <div class="dropdown-content">
+                <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
+                <a href="#"> <img src="images/iconoverrentasCliente.png" width="11px" height="14.44px">Ajustes</a>
+                <a href="{{route('logout')}}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();"> 
+            <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    @else
+    
+
+    <nav> 
+        <a href="{{route('welcome.index')}}" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
+        <a href="#" class = "nav-menu ">Rentar</a>
+        <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
+        <a href="#" class = "nav-menu ">Aprender</a>
+        <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
+        @if (Route::has('register'))
+        
+        <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+        @endif
+    </nav>
+    @endauth
+    @endif
+</header>
 <body>
 <h1 style="position: absolute;
 width: 121px;
