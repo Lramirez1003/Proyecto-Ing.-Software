@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRentaRequest;
 use App\Models\Renta;
+use App\Models\RentaCliente;
 use App\Models\vehiculos;
 use App\Models\Cliente;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -30,7 +31,8 @@ class RentasController extends Controller
 
         #$rentas=Renta::all();
         $rentas=Renta::with(['cliente','vehiculo'])->get();
-        return view('admin.rentas.index',compact('rentas'));
+        $rentasC=RentaCliente::with(['user','vehiculo'])->get();
+        return view('admin.rentas.index',compact('rentas','rentasC'));
     }
 
     /**

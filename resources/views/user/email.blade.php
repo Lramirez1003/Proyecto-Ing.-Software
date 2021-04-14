@@ -15,11 +15,11 @@
 <header>
     <nav>
         <a href="{{route('welcome.index')}}" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
-        <a href="explorarvehiculos.html" class = "administrarv " >Explorar
+        <a href="{{route('explorar.index')}}" class = "administrarv " >Explorar
             <!--<i class="material-icons">person</i>-->
             <img src="{{asset('images/exploraricon.png')}}" width="15px" height="14px">
         </a>
-        <a href="step1.html" class = "administrarv " >Rentar
+        <a href="{{route('rentasC.index')}}" class = "administrarv " >Rentar
             <!--<i class="material-icons">person</i>-->
             <img src="{{asset('images/iconocar.png')}}" width="11.45px" height="14px">
         </a>

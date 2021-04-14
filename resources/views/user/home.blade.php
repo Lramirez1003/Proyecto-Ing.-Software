@@ -52,7 +52,7 @@
 
     <h1 id="hola">Hola<nobr> {{ Auth::user()->name }}! </h1>
     <p id="parrafito">Haz una reserva, comunicate con el dueño o chequea como está tu perfil </p>
-    <a href="step1.html" class="rectangulogris">
+    <a href="{{route('rentasC.index')}}" class="rectangulogris">
         <div id="titulo1">
             Haz una reserva ahora!
         </div>

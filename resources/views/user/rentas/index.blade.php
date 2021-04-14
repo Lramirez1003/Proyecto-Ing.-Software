@@ -18,20 +18,20 @@
 <header>
     <nav>
         <a href="#" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
-        <a href="explorarvehiculos.html" class = "administrarv " >Explorar
+        <a href="{{route('explorar.index')}}" class = "administrarv " >Explorar
             <!--<i class="material-icons">person</i>-->
             <img src="images/exploraricon.png" width="15px" height="14px">
         </a>
-        <a href="clienteRESERVA.html" class = "administrarv " >Rentar
+        <a href="{{route('rentasC.index')}}" class = "administrarv " >Rentar
             <!--<i class="material-icons">person</i>-->
             <img src="images/iconocar.png" width="11.45px" height="14px">
         </a>
 
-        <a href="clientesAPRENDER.html" class = "administrarv ">Aprender
+        <a href="{{route('Learn.index')}}" class = "administrarv ">Aprender
             <img src="images/iconoaprender.png" width="13px" height="14px">
         </a>
 
-        <a href="clienteENVIARCORREO.html" class = "administrarv ">Enviar Correo
+        <a href="{{route('email.index')}}" class = "administrarv ">Enviar Correo
             <img src="images/mailicono.png" width="15px" height="14px">
         </a>
 

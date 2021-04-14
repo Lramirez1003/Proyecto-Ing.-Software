@@ -22,7 +22,7 @@ class RentasClientesController extends Controller
     {
         if (Auth::guest())
         {
-            return redirect()->route('/');
+            return redirect()->route('login');
         }
 
         if (session('success_message')){
@@ -39,18 +39,20 @@ class RentasClientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(User $user)
     {
         if (Auth::guest())
         {
             return redirect()->route('home');
         }
 
-        $user = Auth::user()->name;
+       
         $vehiculos = Vehiculos::all();
         $action=route('rentaC.store');
 
-        return view('user.rentas.create', compact('user','vehiculos','action'));
+        return view('user.rentas.create', compact('vehiculos','action'))->with([
+            'user'=>$user
+        ]);
         
     }
 
@@ -65,7 +67,7 @@ class RentasClientesController extends Controller
        #opcion 1
 
         $renta= new RentaCliente();
-        $renta->user= $request->input('cliente_id');
+        $renta->user= $request->input('user_id');
         $renta->vehiculo= $request->input('vehiculo_id');
         $renta->precio_total=$request->input('precio_total');
         $renta->fecha_inicio= $request->input('fecha_inicio');
@@ -97,13 +99,13 @@ class RentasClientesController extends Controller
      */
     public function edit($id)
     {
-        $renta=Renta::find($id);
+        $renta=RentaCliente::find($id);
         $clientes = Cliente::all();
         $vehiculos = Vehiculos::all();
         $put=True;
-        $action= route('renta.update',['id'=>$id]);
+        $action= route('rentaC.update',['id'=>$id]);
 
-        return view('admin.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
+        return view('user.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
     }
 
     /**
@@ -132,7 +134,7 @@ class RentasClientesController extends Controller
      */
     public function destroy($id)
     {
-        Renta::destroy($id);
+        RentaCliente::destroy($id);
 
         return back();
     }

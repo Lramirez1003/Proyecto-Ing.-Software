@@ -107,6 +107,45 @@ top: 10px;">Agregar renta</h4>
     @endforeach
 </tbody>
   </table>
+  <br>
+  <br>
+  <br>
+  <h2 style="position: absolute; top: 36%; left: 20%; ">Rentas creadas por usuarios</h2>
+  <table id="t01"  >
+    <thead>
+    <tr>
+      <th data-tsorter="input-text">Cliente</th>
+      <th data-tsorter="input-text">Vehiculo</th>
+      <th data-tsorter="numeric" > Precio Total</th>
+      <th data-tsorter="input-text">Fecha de salida</th>
+      <th data-tsorter="input-text">Fecha de entrada</th>
+
+
+    </tr>
+</thead>
+<tbody>
+    @foreach ($rentasC as $rentaC)
+
+
+    <tr>
+      <td>Id: {{$rentaC->user}}</td>
+      <td>{{$rentaC->vehiculo->Nombre ?? ''}}</td>
+      <td>{{$rentaC->precio_total ?? ''}}</td>
+      <td>{{\Carbon\Carbon::parse($rentaC->fecha_inicio)->format('d-m-Y')}}</td>
+      <td>{{\Carbon\Carbon::parse($rentaC->fecha_fin)->format('d-m-Y')}}</td>
+      <td>
+        <form action="{{route('rentaC.delete',$rentaC->id)}}" method="post">
+            @method('delete')
+            @csrf
+            <button type="submit" class="btn-borrar" >Eliminar</button>
+            </form>
+      </td>
+    </tr>
+
+
+    @endforeach
+</tbody>
+  </table>
   {{--@foreach ($rentas as $renta)
     <div class="relleno">
         <img src="{{asset('storage/images/'. $renta->vehiculo->FotoName) }}" alt="car" style="

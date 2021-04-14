@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Ureña Rent-Car</title>
-    <link rel="stylesheet" href="{{ asset('css/Log-in.css') }}">
+    <title>URC | Log-in</title>
+    <link rel="stylesheet" href="{{ asset('css/Log-inn.css') }}">
     <script type="text/javascript"src={{ asset('js/Log-in.js') }}></script>    
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
   <nav>
       <a href="{{route('welcome.index')}}" class = "logo "><img src={{ asset('images/LogoComp80.png') }} alt="Logo"></a>
-      <a href="#" class = "nav-menu ">Rentar</a>
+      <a href="{{route('rentasC.index')}}" class = "nav-menu ">Rentar</a>
       <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
@@ -26,7 +26,7 @@
   
 <hgroup>
   <h1>Inicia Sesion</h1>
-  <a href="#"class="header3 "><h3>Vuelve donde te quedaste</h3></a>
+  <a href="{{ url()->previous() }}"class="header3 "><h3>Vuelve donde te quedaste</h3></a>
 </hgroup>
 <form  class="formulario" method="POST" action="{{ route('login') }}">
     @csrf
@@ -41,7 +41,7 @@
   <button type="submit" class="button buttonGold">{{ __('Entrar') }}
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
-  <p>No tienes cuenta? <a href="#" class = "abuenogracias">Registrate</a></p>
+  <p>No tienes cuenta? <a href="{{route('register')}}" class = "abuenogracias">Registrate</a></p>
   <p><a href="{{route('password.request')}}" class="resetP">Se te olvido la contraseña?</a></p>
 </form>
 </body>
