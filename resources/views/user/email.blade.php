@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/clienteHOMEPAGE.css')}}">
     <link rel="stylesheet" href="{{asset('css/Log-inn.css')}}">
     <script type="text/javascript"src="{{asset('js/Log-in.js')}}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
     
     <meta name="description" content="contact form example">
 </head>

@@ -66,12 +66,20 @@
         <h2>Actualizando usuario...</h2>
         <div id="nombreVehiculo" class="group">
             <input class="inputTexto" type="text" name="name" value="{{$user->name}}"><span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Nombre</label>
+            <label class="labelTexto">Nombre:</label>
         </div>
 
         <div class="group">
             <input class="inputTexto" type="email" name="email" value="{{$user->email}}"><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Correo electronico:</label>
+        </div>
+        <div class="group">
+            <input class="inputTexto" type="text" name="licencia" value="{{$user->licencia}}"><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Licencia:</label>
+        </div>
+        <div  class="group">
+            <input class="inputTexto" type="text" name="telefono" value="{{$user->telefono}}"><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Telefono</label>
         </div>
         @foreach ($roles as $role)
         <div id="numeroPasajeros" class="group">
@@ -82,16 +90,6 @@
             </div>  
         @endforeach
 
-        <!--<h4>Selecciona que mas posee el vehiculo</h4>
-         <div id="extras" class="group">
-            <input type="checkbox" name="favorite1" value="Aire Acondicionado" /> <i class="material-icons">
-                air</i> Aire Acondicionado
-            <input type="checkbox" name="favorite2" value="Bluetooth" /> <i class="material-icons">
-                bluetooth </i>  Bluetooth
-            <input type="checkbox" name="favorite3" value="Radio F/M" /> <i class="material-icons">
-                radio</i>  Radio F/M
-
-         </div>-->
          <button type="submit" value="submit" class="button" style="margin-left: 50%;background-color: rgba(255, 167, 81, 1);border-radius: 5px;">Actualizar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
          </button>

@@ -133,6 +133,8 @@
       <th data-tsorter="input-text">Nombre</th>
       <th data-tsorter="input-text">Correo</th>
       <th data-tsorter="input-text">Cedula</th>
+      <th data-tsorter="input-text">Licencia</th>
+      <th data-tsorter="input-text">Telefono</th>
       <th data-tsorter="input-text">Rol</th>
  
       
@@ -147,6 +149,8 @@
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
       <td>{{$user->cedula}}</td>
+      <td>{{$user->licencia}}</td>
+      <td>{{$user->telefono}}</td>
       <td>{{ implode(',',$user->roles()->get()->pluck('Nombre')->toArray()) }}</td>
       
 

@@ -88,7 +88,7 @@
             <div id="linea2"></div>
             <p class="textBloques">Explora los diferentes tipos de carros</p>
             <div class="owl-carousel owl-theme">
-               <@foreach ($vehiculoss as $vehiculo)
+               @foreach ($vehiculoss as $vehiculo)
 
                <a href="{{route('explorar.index')}}"class="nombresVehiculos"> <img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt=" " width="206" height="125">{{$vehiculo->Nombre}} <b>{{$vehiculo->N_pasajeros}}</b>
                    <i class="material-icons">person</i></a>

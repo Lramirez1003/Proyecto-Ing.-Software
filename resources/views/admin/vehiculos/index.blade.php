@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/adminVehiculos.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/adminVehiculo.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
     <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
@@ -133,7 +133,7 @@ top: 0px;">Agregar Vehiculos</h4>
 </div>
 
 
-<table id="t01" style="
+<!--<table id="t01" style="
     cursor: pointer;
     ">
     <thead>
@@ -170,7 +170,35 @@ top: 0px;">Agregar Vehiculos</h4>
     </tbody>
 
 
-  </table>
+  </table>-->
+
+  <section class="container flex text-center">
+    @foreach($vehiculoss as $vehiculo)
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{{asset('storage/images/'. $vehiculo->FotoName) }}" alt="Avatar" style="width:300px;height:100px;border-radius:5px;">
+          <p>{{$vehiculo->Nombre ?? ''}}   <i class="material-icons">person</i></a> {{$vehiculo->N_pasajeros ?? ''}} </p>
+        </div>
+        <div class="flip-card-back">
+          <p>Nombre: {{$vehiculo->Nombre ?? ''}}</p>
+          <p>Placa: {{$vehiculo->Placa ?? ''}}</p>
+          <p>Tipo: {{$vehiculo->Tipo ?? ''}}</p>
+          <p>Precio: {{$vehiculo->Precio ?? ''}}</p>
+          <p># pasajeros: {{$vehiculo->N_pasajeros ?? ''}}</p>
+          <a href="{{route('vehiculos.edit',["vehiculo"=>$vehiculo])}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
+          <form action="{{route('vehiculos.delete',["vehiculo"=>$vehiculo])}}" method="post">
+          @method('delete')
+          @csrf
+          <button type="submit" class="btn-borrar" >Borrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    @endforeach
+
+  </section>
+  
 
   <!-- SORT -->
 

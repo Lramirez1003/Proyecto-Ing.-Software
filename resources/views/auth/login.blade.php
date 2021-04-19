@@ -31,13 +31,28 @@
 <form  class="formulario" method="POST" action="{{ route('login') }}">
     @csrf
   <div class="group">
-    <input id="email" value="{{old('email') }}" name="email" type="email"><span class="highlight"></span><span class="bar"></span>
+    <input id="email"  value="{{old('email') }}" name="email" type="email" class="@error('email') is-invalid @enderror"><span class="highlight"></span><span class="bar"></span>
     <label>Correo electronico</label>
+
+    @error('email')
+       <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+         </span>
+     @enderror
   </div>
+
   <div class="group">
-    <input id="password" value="{{old('password') }}" name="password" type="password"><span class="highlight"></span><span class="bar"></span>
+    <input id="password" value="{{old('password') }}" name="password" type="password" class="@error('password') is-invalid @enderror"  ><span class="highlight"></span><span class="bar"></span>
     <label>Contraseña</label>
+
+    @error('password')
+      <span role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+  @enderror
+
   </div>
+
   <button type="submit" class="button buttonGold">{{ __('Entrar') }}
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>

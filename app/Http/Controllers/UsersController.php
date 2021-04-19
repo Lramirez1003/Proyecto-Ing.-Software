@@ -58,6 +58,8 @@ class UsersController extends Controller
 
         $user->name=$request->name;
         $user->email=$request->email;
+        $user->telefono=$request->telefono;
+        $user->licencia=$request->licencia;
         $user->save();
 
         return redirect()->route('users.index');

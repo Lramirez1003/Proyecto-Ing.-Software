@@ -37,10 +37,10 @@
       <label>Nombre y apellido</label>
     </div>
     <div class="group">
-      <input type="text" class="@error('cedula') is-invalid @enderror" id="cedula" name="cedula" value="{{ old('cedula')}}" required autocomplete="cedula" ><span class="highlight"></span><span class="bar"></span>
-      <label>Cédula</label>
+      <input type="text" class="@error('telefono') is-invalid @enderror" id="telefono" name="telefono" value="{{ old('telefono')}}" required autocomplete="telefono" ><span class="highlight"></span><span class="bar"></span>
+      <label>Teléfono</label>
 
-      @error('cedula')
+      @error('telefono')
       <span role="alert">
         <strong>{{ $message }}</strong>
     </span>
@@ -56,8 +56,8 @@
         <strong>{{ $message }}</strong>
     </span>
 @enderror
-
     </div>
+
     <div class="group">
       <input type="password" class="@error('password') is-invalid @enderror" id="password" name="password" required autocomplete="new-password"><span class="highlight"></span><span class="bar"></span>
       <label>Contraseña</label>
