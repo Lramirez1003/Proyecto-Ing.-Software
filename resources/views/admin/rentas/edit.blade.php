@@ -23,12 +23,12 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{route('rentas.index')}}" class = "administrarv ">Rentas
             <img src="{{asset('images/carnolmal.png')}}" width="20px" height="16px">
 
         </a>
 
-        <a href="#" class = "administrarv ">Calendario
+        <a href="{{route('Calendario.index')}}" class = "administrarv ">Calendario
             <img src="{{asset('images/iconocalendar.png')}}" width="15px" height="18px">
 
         </a>
@@ -60,8 +60,9 @@
     </button>
     <!--    FORMULARIO PARA AGREGAR VEHICULOS        -->
     <div>
-        <form action="{{route('renta.update',$renta->id)}}" method="post" enctype="multipart/form-data" class="formulario">
+        <form action="{{route('renta.update',$renta)}}" method="post" enctype="multipart/form-data" class="formulario">
             @csrf
+            {{method_field('PUT')}}
     
             <h2>Actualizando renta...</h2>
             <div class="group">

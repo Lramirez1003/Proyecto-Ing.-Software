@@ -97,15 +97,18 @@ class RentasClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(RentaCliente $renta)
     {
-        $renta=RentaCliente::find($id);
-        $clientes = Cliente::all();
+        
         $vehiculos = Vehiculos::all();
         $put=True;
-        $action= route('rentaC.update',['id'=>$id]);
-
-        return view('user.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
+        
+        return view('user.rentas.edit')->with([
+            'renta'=>$renta,
+            'vehiculos'=>$vehiculos,
+            'put'=>$put,
+            
+        ]);
     }
 
     /**
@@ -115,15 +118,14 @@ class RentasClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, RentaCliente $renta)
     {
-        $renta = Renta::find($id);
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
         $renta->precio_total=$request->input('precio_total');
-        $renta->update();
+        $renta->save();
 
-        return redirect()->route('renta.index');
+        return redirect()->route('rentas.index');
     }
 
     /**

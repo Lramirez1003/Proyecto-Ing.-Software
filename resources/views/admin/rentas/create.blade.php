@@ -28,12 +28,12 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Calendario
+        <a href="{{route('Calendario.index')}}" class = "administrarv ">Calendario
             <img src="images/iconocalendar.png" width="15px" height="18px">
 
         </a>
 
-        <a href="#" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
+        <a href="{{route('clientes.index')}}" class = "circulop"> <img src="{{asset('images/fotocliente.png')}}" alt="clientes" width="44px" height="44.44px"> </a>
 
         <div class="dropdown">
             <img src="{{asset('images/admin 1.png')}}" alt="A">
@@ -83,6 +83,7 @@ top: 0px;">Agregar renta</h4>
                 @foreach ($clientes as $cliente)
                 <option value="{{$cliente->id}}">{{$cliente->Nombre}}</option>
                 @endforeach
+                
 
            
             </select>

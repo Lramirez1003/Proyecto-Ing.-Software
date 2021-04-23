@@ -59,8 +59,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->midd
 
 Route::resource('users', 'App\Http\Controllers\UsersController',['except'=>['show','create','store']])->middleware('can:manage-users');
 
-// Perfil
-
 
 
 //Vehiculos
@@ -90,6 +88,8 @@ Route::delete('/vehiculos/{vehiculo}',[
     'as'=>'vehiculos.delete'
 ])->middleware('can:manage-users');
 
+
+
 //Cliente
 Route::get('/Clientes', [
     'uses'=>'App\Http\Controllers\ClienteController@index',
@@ -117,6 +117,8 @@ Route::delete('/Cliente/{cliente}',[
     'as'=>'cliente.delete'
 ])->middleware('can:manage-users');
 
+
+
 //Renta
 
 #Route::resource('renta','RentasController');
@@ -142,7 +144,7 @@ Route::get('/Renta/{renta}/edit',[
     'as'=>'renta.edit'
 ])->middleware('can:manage-users');
 
-Route::post('/Renta/{renta}',[
+Route::put('/Renta/{renta}',[
     'uses'=>'App\Http\Controllers\RentasController@update',
     'as'=>'renta.update'
 ])->middleware('can:manage-users');
@@ -174,9 +176,9 @@ Route::get('/TuRenta/{renta}/edit',[
     'as'=>'rentaC.edit'
 ]);
 
-Route::post('/TuRenta/{renta}',[
+Route::put('/TuRenta/{renta}',[
     'uses'=>'App\Http\Controllers\User\RentasClientesController@update',
-    'as'=>'renta.update'
+    'as'=>'rentaC.update'
 ]);
 
 Route::delete('/TuRenta/{renta}',[

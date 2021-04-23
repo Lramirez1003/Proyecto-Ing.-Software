@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/adminVehiculo.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/admiVehiculo.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
     <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
@@ -111,16 +111,7 @@ top: 0px;">Agregar Vehiculos</h4>
         <input class="inputTexto" name="N_pasajeros"type="number" min="1" max = "6" required><span class="highlight"></span><span class="bar"></span>
         <label for="cantidad" class="labelTexto">Pasajeros</label>
         </div>
-       <!-- <h4>Selecciona que mas posee el vehiculo</h4>
-         <div id="extras" class="group">
-            <input type="checkbox" name="favorite1" value="Aire Acondicionado" /> <i class="material-icons">
-                air</i> Aire Acondicionado
-            <input type="checkbox" name="favorite2" value="Bluetooth" /> <i class="material-icons">
-                bluetooth </i>  Bluetooth
-            <input type="checkbox" name="favorite3" value="Radio F/M" /> <i class="material-icons">
-                radio</i>  Radio F/M
 
-         </div>-->
          <button type="reset" value="reset" class="button" style="color: orange;border: 2px solid;
          border-radius: 5px;" onclick="closeForm()" >Cancelar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>

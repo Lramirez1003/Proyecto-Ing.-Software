@@ -58,6 +58,7 @@ class UsersController extends Controller
 
         $user->name=$request->name;
         $user->email=$request->email;
+        $user->cedula=$request->cedula;
         $user->telefono=$request->telefono;
         $user->licencia=$request->licencia;
         $user->save();

@@ -23,12 +23,12 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{route('rentas.index')}}" class = "administrarv ">Rentas
             <img src="{{asset('images/carnolmal.png')}}" width="20px" height="16px">
 
         </a>
 
-        <a href="#" class = "administrarv ">Calendario
+        <a href="{{route('Calendario.index')}}" class = "administrarv ">Calendario
             <img src="{{asset('images/iconocalendar.png')}}" width="15px" height="18px">
 
         </a>
@@ -73,6 +73,12 @@
             <input class="inputTexto" type="email" name="email" value="{{$user->email}}"><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Correo electronico:</label>
         </div>
+
+        <div class="group">
+            <input class="inputTexto" type="text" name="cedula" value="{{$user->cedula}}"><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Cedula:</label>
+        </div>
+
         <div class="group">
             <input class="inputTexto" type="text" name="licencia" value="{{$user->licencia}}"><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Licencia:</label>

@@ -95,6 +95,7 @@ top: 10px;">Agregar renta</h4>
       <td>{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
       <td>{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
       <td>
+        <a href="{{route('renta.edit',$renta->id)}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
         <form action="{{route('renta.delete',$renta->id)}}" method="post">
             @method('delete')
             @csrf
@@ -106,6 +107,8 @@ top: 10px;">Agregar renta</h4>
 
     @endforeach
 </tbody>
+
+
   </table>
   <br>
   <br>
@@ -137,6 +140,7 @@ top: 10px;">Agregar renta</h4>
       <td>{{\Carbon\Carbon::parse($rentaC->fecha_inicio)->format('d-m-Y')}}</td>
       <td>{{\Carbon\Carbon::parse($rentaC->fecha_fin)->format('d-m-Y')}}</td>
       <td>
+        <a href="{{route('rentaC.edit',$rentaC->id)}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
         <form action="{{route('rentaC.delete',$rentaC->id)}}" method="post">
             @method('delete')
             @csrf

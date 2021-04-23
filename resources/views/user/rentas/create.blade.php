@@ -16,7 +16,7 @@
 </head>
 <header>
     <nav>
-        <a href="#" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
+        <a href="{{route('welcome.index')}}" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
         <a href="{{route('explorar.index')}}" class = "administrarv " >Explorar
             <!--<i class="material-icons">person</i>-->
             <img src="images/exploraricon.png" width="15px" height="14px">
@@ -56,7 +56,7 @@
 </header>
 
 <body style="background-color: white;">
-    <h1>Tus rentas</h1>
+    <h1>Tu renta</h1>
     <div id="linea1"></div>
     <!--<button class="btn-popup" onclick="openForm()">
         <img src="{{ asset('images/addicon.png')}}" style="position: absolute;
@@ -73,7 +73,7 @@ top: 0px;">Agregar renta</h4>
     <form action="{{$action}}" method="POST" enctype="multipart/form-data" class="formulario">
         @csrf
 
-        <h2>Agregando renta...</h2>
+        <h2>Creando renta...</h2>
         <div class="group">
            
             <select class="inputTexto" name="user_id" id="user_id" required> <span class="highlight"></span><span class="bar"></span>
@@ -125,12 +125,12 @@ top: 0px;">Agregar renta</h4>
             <label for="fecha_fin">Fecha de entrada:</label>
             <input type="date" name="fecha_fin" id="fecha_fin" required>
         </div>
-
+        <!--
         <div class="group">
             <input class="inputTexto" type="text" name="precio_total" required><span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Precio total:</label>
         </div>
-
+        -->
          
          <a href="{{ url()->previous() }}"  class="button" style="color: orange;border: 2px solid;
          border-radius: 5px; text-decoration: none; ">Cancelar

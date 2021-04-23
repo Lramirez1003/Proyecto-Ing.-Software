@@ -5,7 +5,7 @@
     <title>URC | Explorar</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/Register.css')}}">
-    <link rel="stylesheet" href="{{asset('css/explorar.css')}}">
+    <link rel="stylesheet" href="{{asset('css/explore.css')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
@@ -128,11 +128,11 @@ border: 3px solid #FFEF3E;"></div>
 height: 219px;">
     <h3 class="nombreCarro">{{$vehiculo->Nombre ?? ''}}</h3>
     
-    <p class="tipoCarro">{{$vehiculo->Tipo ?? ''}}</p>
+    <p class="tipoCarro"> Tipo: {{$vehiculo->Tipo ?? ''}}</p>
     
-    <p>{{$vehiculo->N_pasajeros ?? ''}}</p>
+    <p>Numero de pasajeros: {{$vehiculo->N_pasajeros ?? ''}}</p>
 
-	<p>RD$ {{$vehiculo->Precio ?? ''}} por dia</p>
+	<p>Precio: RD$ {{$vehiculo->Precio ?? ''}} por dia</p>
 
     <a href="{{route('rentasC.index')}}" class="forma-boton-amarillo">
         <div class="seleccionar-titulo">Seleccionar</div>

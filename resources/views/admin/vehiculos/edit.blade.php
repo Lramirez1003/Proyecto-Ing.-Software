@@ -23,12 +23,12 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{route('rentas.index')}}" class = "administrarv ">Rentas
             <img src="{{asset('images/carnolmal.png')}}" width="20px" height="16px">
 
         </a>
 
-        <a href="#" class = "administrarv ">Calendario
+        <a href="{{route('Calendario.index')}}" class = "administrarv ">Calendario
             <img src="{{asset('images/iconocalendar.png')}}" width="15px" height="18px">
 
         </a>

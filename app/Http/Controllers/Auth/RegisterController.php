@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:3', 'confirmed'],
-            'cedula'=>['required','string','max:13','unique:users'],
+            'telefono'=>['required','string','max:13','unique:users'],
         ]);
     }
 
@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'cedula' =>$data['cedula'],
+            'telefono' =>$data['telefono'],
         ]);
 
         $role=Role::select('id')->where('Nombre','customer')->first();

@@ -60,8 +60,9 @@
     </button>
     <!--    FORMULARIO PARA AGREGAR VEHICULOS        -->
     <div>
-        <form action="{{route('renta.update',$renta->id)}}" method="post" enctype="multipart/form-data" class="formulario">
+        <form action="{{route('rentaC.update',$renta)}}" method="post" enctype="multipart/form-data" class="formulario">
             @csrf
+            {{method_field('PUT')}}
     
             <h2>Actualizando renta...</h2>
             <div class="group">

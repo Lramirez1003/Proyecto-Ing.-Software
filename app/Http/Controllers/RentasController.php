@@ -8,6 +8,7 @@ use App\Models\Renta;
 use App\Models\RentaCliente;
 use App\Models\vehiculos;
 use App\Models\Cliente;
+use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
 use Auth;
 
@@ -96,16 +97,33 @@ class RentasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    /**public function edit($id)
     {
-        $renta=Renta::find($id);
+     *   $renta=Renta::find($id);
+     *   $clientes = Cliente::all();
+      *  $vehiculos = Vehiculos::all();
+      *  $put=True;
+      *  $action= route('renta.update',['id'=>$id]);
+
+      *  return view('admin.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
+    }*/
+
+    public function edit(Renta $renta)
+    {
+
         $clientes = Cliente::all();
         $vehiculos = Vehiculos::all();
         $put=True;
-        $action= route('renta.update',['id'=>$id]);
-
-        return view('admin.renta.edit',compact('renta', 'clientes','vehiculos', 'put', 'action') );
+        
+        return view('admin.rentas.edit')->with([
+            'renta'=>$renta,
+            'clientes'=>$clientes,
+            'vehiculos'=>$vehiculos,
+            'put'=>$put,
+            
+        ]);
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -114,15 +132,15 @@ class RentasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Renta $renta)
     {
-        $renta = Renta::find($id);
+        //$renta = Renta::find($id);
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
         $renta->precio_total=$request->input('precio_total');
-        $renta->update();
+        $renta->save();
 
-        return redirect()->route('renta.index');
+        return redirect()->route('rentas.index');
     }
 
     /**

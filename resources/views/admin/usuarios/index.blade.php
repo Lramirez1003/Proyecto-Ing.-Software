@@ -129,7 +129,7 @@
     ">   
     <thead>  
     <tr>
-        <th data-tsorter="input-text">Id</th>
+      <th data-tsorter="input-text">Id</th>
       <th data-tsorter="input-text">Nombre</th>
       <th data-tsorter="input-text">Correo</th>
       <th data-tsorter="input-text">Cedula</th>
