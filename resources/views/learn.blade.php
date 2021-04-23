@@ -6,14 +6,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/clienteHOMEPAGE.css')}}">
     <link rel="stylesheet" href="{{asset('css/Register.css')}}">
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
     @if (Route::has('login'))
     @auth
     <nav>
- 
+
         <a href="{{route('welcome.index')}}" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
         <a href="{{route('explorar.index')}}" class = "administrarv " >Explorar
          <!--<i class="material-icons">person</i>-->
@@ -38,7 +38,7 @@
                 <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
                 <a href="#"> <img src="images/iconoverrentasCliente.png" width="11px" height="14.44px">Ajustes</a>
                 <a href="{{route('logout')}}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"> 
+                document.getElementById('logout-form').submit();">
             <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -53,16 +53,16 @@
     </nav>
 
     @else
-    
 
-    <nav> 
+
+    <nav>
         <a href="{{route('welcome.index')}}" class = "logo "><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
         <a href="{{route('rentasC.index')}}" class = "nav-menu ">Rentar</a>
         <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
         <a href="#" class = "nav-menu ">Aprender</a>
         <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
         @if (Route::has('register'))
-        
+
         <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
         @endif
     </nav>
@@ -163,7 +163,7 @@ font-size: 22px;
 line-height: 29px;
 text-align: right;
 
-color: #333333;">Cada cuanto hay que llevar el carro al mécanico?</h3>
+color: #333333;">Cómo saber cual carro comprar?</h3>
     <p style="position: absolute;
 width: 721px;
 height: 96px;
@@ -192,7 +192,7 @@ top: 1000px;
 background: rgba(255, 239, 62, 0.1);
 border-radius: 5px;
 ">
-    <img src="{{asset('images/arreglandocarro.png')}}" style="position: absolute;
+    <img src="{{asset('images/toyota_prius_2019_a.jpg')}}" style="position: absolute;
 width: 426px;
 height: 260px;
 left: 0px;
@@ -207,7 +207,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 22px;
 line-height: 29px;
-">Nostalgic Route 66 Road Trip</h3>
+">Los 10 carros mas rentables del 2020</h3>
     <p style="position: absolute;
 width: 741px;
 height: 96px;
@@ -221,10 +221,16 @@ font-size: 18px;
 line-height: 24px;
 
 color: #333333;
-">Comprar un auto es un evento que tiene importancia y
-        está muy vinculado con tus necesidades diarias (como ir al trabajo, reuniones,
-        finanzas personales, etc.), por esa razón, para elegir un auto debes pensar en varios aspectos
-        que te permitirán tener una idea más clara de las características que debe tener.</p>
+">Toyota Prius: 93 puntos
+  Lexus NX: 91 puntos
+  Buick Encore: 91 puntos
+  Lexus GX: 90 puntos
+  Honda HR-V: 90 puntos
+  Toyota Prius Prime: 88 puntos
+  Hyundai Kona: 87 puntos
+  Audi A5: 86 puntos
+  Audi A4: 86 puntos
+  Mazda CX-5: 85 puntos</p>
 </div>
 
 </body>
