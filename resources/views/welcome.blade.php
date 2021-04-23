@@ -56,8 +56,8 @@
 
 <body>
     <main id="page-container">
-        <h2 class="header2">Haz una reservación!</h2>
-        <div id="linea1"></div>
+        <h2 class="header2" style="left:250px;">Haz una reservación!</h2>
+        <div id="linea1" style="left:250px;"></div>
         <!-- BANNER PRINCIPAL -->
         <section class="BannerHome">
             <div class ="FechaElegir" >
