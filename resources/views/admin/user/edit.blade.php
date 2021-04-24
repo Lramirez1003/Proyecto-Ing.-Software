@@ -29,7 +29,6 @@
         <div class="dropdown">
             <img src="images/admin 1.png" alt="A">
             <div class="dropdown-content">
-            <div id="puntosDropdown">200 puntos</div>
             <a href="#"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">   Ver Perfil</a>
             <a href="#"> <img src="images/iconoverrentasCliente.png" width="11px" height="14.44px"> Ver Rentas</a>
             <a href="#"> <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
@@ -44,39 +43,41 @@
 <body>
     <div class="circuloPerfil"><img src="images/fotoPerfil.png" alt=""></div>
     <h3 id="hola"> <nobr> {{ Auth::user()->name }}</h3>
-    <p id="parrafito">A medida que vayas rentando, se te iran sumando puntos hasta poder canjearlos  </p>
-    <a href="{{route('Ajustes.edit',Auth::user()->id)}}" id="bloqueDorado" >
-        Edita tu perfil
-    </a>
+
     <div id="rectanguloPerfil">
         <div id="textoPerfil">Perfil</div>
     </div>
 
-    <div class="bloqueGris"  >
-        <div class="textoBloques">{{Auth::user()->name}}
-        </div>
-    </div>
+    <div>
+        <form action="{{ route('Ajustes.update',Auth::user()) }}" method="post">
+            @csrf
+            {{method_field('PUT')}}
 
-    <div class="bloqueGris" style="top: 486px;" >
-            <div class="textoBloques">{{Auth::user()->email}}
+            <div  >
+                <input type="text" class="bloqueGris" name="name" placeholder="Nombre" value="{{Auth::user()->name}}">
+
             </div>
-    </div>
 
-    <div class="bloqueGris" style="top: 558px;"  >
-        <div class="textoBloques">{{Auth::user()->cedula}}
-        </div>
-    </div>
+            <div class="bloqueGris" style="top: 486px;" >
+                <input type="text" class="bloqueGris" name="email" placeholder="Correo Eletronico" value="{{Auth::user()->email}}">
+            </div>
 
-    <div class="bloqueGris" style="top: 630px;">
-        <div class="textoBloques">{{Auth::user()->licencia}}
-        </div>
-    </div>
+            <div class="bloqueGris" style="top: 558px;"  >
+                <input type="text" class="bloqueGris" name="cedula" placeholder="Cedula" value="{{Auth::user()->cedula}}">
+            </div>
 
-    <div class="bloqueGris" style="top: 702px;" >
-        <div class="textoBloques">{{Auth::user()->telefono}}
-        </div>
-    </div>
+            <div class="bloqueGris" style="top: 630px;">
+                <input type="text" class="bloqueGris" name="licencia" placeholder="Licencia" value="{{Auth::user()->licencia}}">
+            </div>
 
+            <div class="bloqueGris" style="top: 702px;" >
+                <input type="text" class="bloqueGris" name="telefono" placeholder="Telefono" value="{{Auth::user()->telefono}}">
+            </div>
+
+            <button type="submit" value="submit">Actualiza </button>
+
+        </form>
+    </div>
 
 </body>
 </html>

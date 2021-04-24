@@ -50,6 +50,7 @@ Route::get('/Aprender',[
 
     ]);
 
+    Route::resource('Ajustes', 'App\Http\Controllers\User\AjustesController',['except'=>['show','create','store']]); 
 
 Auth::routes();
 
