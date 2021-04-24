@@ -5,7 +5,7 @@
     <title>URC | Explorar</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/Register.css')}}">
-    <link rel="stylesheet" href="{{asset('css/explore.css')}}">
+    <link rel="stylesheet" href="{{asset('css/explorarr.css')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
 </head>
 <header>
