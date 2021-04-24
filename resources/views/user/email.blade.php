@@ -29,7 +29,7 @@
             <img src="{{asset('images/iconoaprender.png')}}" width="13px" height="14px">
         </a>
 
-        <a href="#" class = "administrarv ">Enviar Correo
+        <a href="{{route('Ajustes.index')}}" class = "administrarv ">Enviar Correo
             <img src="{{asset('images/mailicono.png')}}" width="15px" height="14px">
         </a>
 
@@ -38,7 +38,7 @@
             <div class="dropdown-content">
             
             <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
-            <a href="#"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
+            <a href="{{route('Ajustes.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
             
             <a href="{{route('logout')}}" onclick="event.preventDefault();
                 document.getElementById('logout-formu').submit();"> 

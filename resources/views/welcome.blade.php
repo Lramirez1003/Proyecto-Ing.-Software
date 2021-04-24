@@ -30,7 +30,7 @@
         <div class="dropdown-content">
 
         <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
-        <a href="#"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
+        <a href="{{route('Ajustes.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Ajustes</a>
 
         <a href="{{route('logout')}}" onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
