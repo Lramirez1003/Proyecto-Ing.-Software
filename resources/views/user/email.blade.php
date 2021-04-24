@@ -20,7 +20,7 @@
             <!--<i class="material-icons">person</i>-->
             <img src="{{asset('images/exploraricon.png')}}" width="15px" height="14px">
         </a>
-        <a href="{{route('rentasC.index')}}" class = "administrarv " >Rentar
+        <a href="{{route('rentaC.create')}}" class = "administrarv " >Rentar
             <!--<i class="material-icons">person</i>-->
             <img src="{{asset('images/iconocar.png')}}" width="11.45px" height="14px">
         </a>

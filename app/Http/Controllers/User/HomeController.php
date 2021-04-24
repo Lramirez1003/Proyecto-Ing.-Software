@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Controller;
 use Auth;
 
@@ -30,6 +31,9 @@ class HomeController extends Controller
             return redirect()->route('/');
         }
 
+        if (session('success_message')){
+            Alert::success('Renta agregada',session('success_message'));
+        }
 
         return view('user.home');
     }

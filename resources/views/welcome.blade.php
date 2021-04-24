@@ -20,7 +20,7 @@
   <nav>
       <a href="#" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
       <button class="nav-button"onclick="accion()" >Menú</button>
-      <a href="{{route('rentasC.index')}}" class = "nav-menu ">Rentar</a>
+      <a href="{{route('rentaC.create')}}" class = "nav-menu ">Rentar</a>
       <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       @if (Route::has('login'))
@@ -75,7 +75,7 @@
                 <h4 class="header4"> Selecciona un tipo de vehiculo</h4>
                 <button class="btn-Intermedio"><i class="fa fa-truck"></i> <br/> Intermedio</button>
                 <button class="btn-Compacto"><i class="fa fa-car"></i><br/>Compacto</button>
-                <div><a href="{{route('rentasC.index')}}" class="btn-seleccionar">Seleccionar</a></div>
+                <div><a href="{{route('rentaC.create')}}" class="btn-seleccionar">Seleccionar</a></div>
             </div>
 
             <div class="elantraBanner"><img src="images/bannerlogoafuera.JPG" alt="Elantra" width="605" height="398"></div>

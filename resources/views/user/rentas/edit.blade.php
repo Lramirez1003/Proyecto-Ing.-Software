@@ -23,7 +23,7 @@
 
         </a>
 
-        <a href="#" class = "administrarv ">Rentas
+        <a href="{{route('rentaC.create')}}" class = "administrarv ">Rentas
             <img src="{{asset('images/carnolmal.png')}}" width="20px" height="16px">
 
         </a>

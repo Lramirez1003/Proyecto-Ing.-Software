@@ -77,7 +77,7 @@ class RentasClientesController extends Controller
 
 
         
-        return redirect()->route('rentasC.index')->withSuccessMessage('Agregada satisfactoriamente'); 
+        return redirect()->route('homec.index')->withSuccessMessage('Comunicate con nosotros para confirmar'); 
     }
 
     /**
