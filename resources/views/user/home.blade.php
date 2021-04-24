@@ -70,7 +70,7 @@
         <img class= "iconopos" src="images/mailicono.png" width="37.92px" height="38px">
     </a>
     <!-- -->
-    <a href="clientePERFIL.html" class="rectangulogris" style="left: 940px">
+    <a href="{{route('Ajustes.index')}}" class="rectangulogris" style="left: 940px">
         <div id="titulo3">
             Chequea tu perfil y rentas!
         </div>

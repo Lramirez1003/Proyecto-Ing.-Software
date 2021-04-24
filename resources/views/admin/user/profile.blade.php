@@ -5,7 +5,7 @@
     <title>URC | Perfil</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/PERFILcliente.css')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/LogoComp90.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/LogoComp90.png')}}">
     <!--NAV BAR-->
     <nav>
 
