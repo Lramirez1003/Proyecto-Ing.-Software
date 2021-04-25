@@ -9,6 +9,7 @@ use App\Models\vehiculos;
 use App\Models\User;
 use App\Models\RentaCliente;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Mail;
 use Auth;
 
 class RentasClientesController extends Controller
@@ -50,6 +51,10 @@ class RentasClientesController extends Controller
         $vehiculos = Vehiculos::all();
         $action=route('rentaC.store');
 
+
+
+
+
         return view('user.rentas.create', compact('vehiculos','action'))->with([
             'user'=>$user
         ]);
@@ -69,12 +74,29 @@ class RentasClientesController extends Controller
         $renta= new RentaCliente();
         $renta->user= $request->input('user_id');
         $renta->vehiculo= $request->input('vehiculo_id');
-        $renta->precio_total=$request->input('precio_total');
+        
+        $renta->total_de_dias=$request->input('total_de_dias');
+        $renta->precio_total= $renta->total_de_dias * vehiculos::where('id',$renta->vehiculo)->pluck('precio')->first();
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
 
         $renta->save();
 
+                // email data
+                $email_data = array(
+                    'name' => Auth::user()->name,
+                    'email' => Auth::user()->email,
+                    'rent'=> vehiculos::where('id',$renta->vehiculo)->pluck('Nombre')->first(),
+                    'prec'=> RentaCliente::where('precio_total',$renta->precio_total)->pluck('precio_total')->first(),
+
+                );
+        
+                // send email with the template
+                Mail::send('renta_mail', $email_data, function ($message) use ($email_data) {
+                    $message->to($email_data['email'], $email_data['name'])
+                        ->subject('Welcome to My PP')
+                        ->from('totosuave15@hotmail.com', 'Chica culo');
+                });
 
         
         return redirect()->route('homec.index')->withSuccessMessage('Comunicate con nosotros para confirmar'); 
@@ -123,6 +145,7 @@ class RentasClientesController extends Controller
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
         $renta->precio_total=$request->input('precio_total');
+        $renta->total_de_dias=$request->input('total_de_dias');
         $renta->save();
 
         return redirect()->route('rentas.index');
