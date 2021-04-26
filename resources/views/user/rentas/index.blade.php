@@ -17,7 +17,7 @@
 </head>
 <header>
     <nav>
-        <a href="#" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
+        <a href="{{route('welcome.index')}}" class = "logo "><img src="images/LogoComp80.png" alt="Logo"></a>
         <a href="{{route('explorar.index')}}" class = "administrarv " >Explorar
             <!--<i class="material-icons">person</i>-->
             <img src="images/exploraricon.png" width="15px" height="14px">

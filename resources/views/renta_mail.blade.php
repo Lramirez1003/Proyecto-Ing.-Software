@@ -6,6 +6,6 @@ El precio total es <b> {{$prec}}</b>, y tu codigo de la renta es <b>{{$codigoder
 
 Con fecha de salida <b>{{$fechasalida}} </b>, hasta el <b>{{$fechaentrega}}</b><br><br>
 
-Gracias por tu renta,<br>
+Gracias por tu renta, y si tienes alguna pregunta, no dudes en llamarnos al número: 809-724-6519.</div><br>
 
 Victor Ureña
