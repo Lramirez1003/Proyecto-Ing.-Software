@@ -32,11 +32,11 @@
             <div class="dropdown-content">
                 <a href="{{route('homec.index')}}"> <img src="images/iconoverperfilCLiente.png" width="11px" height="14.44px">Cuenta</a>
                 <a href="{{route('Ajustes.index')}}"> <img src="images/iconoverrentasCliente.png" width="11px" height="14.44px">Ajustes</a>
-    
+
                 <a href="{{route('logout')}}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"> 
+                document.getElementById('logout-form').submit();">
                     <img src="images/iconologout.png" width="14px" height="14.44px"> Cerrar Sesión</a>
-    
+
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
@@ -49,11 +49,15 @@
 </head>
 <!--CUERPO DEL PERFIL-->
 <body>
-    <div class="circuloPerfil"><img src="images/fotoPerfil.png" alt=""></div>
+    <img src="images/fotocliente.png" style="position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 240px;
+        top: 170px;">
     <h3 id="hola"> <nobr> {{ Auth::user()->name }}</h3>
 
     <div id="rectanguloPerfil">
-        <div id="textoPerfil">Perfil</div>
+        <div id="textoPerfil">Informacion Personal</div>
     </div>
 
     <div>
@@ -66,23 +70,24 @@
 
             </div>
 
-            <div class="bloqueGris" style="top: 486px;" >
-                <input type="text" class="bloqueGris" name="email" placeholder="Correo Eletronico" value="{{Auth::user()->email}}">
-            </div>
 
-            <div class="bloqueGris" style="top: 558px;"  >
-                <input type="text" class="bloqueGris" name="cedula" placeholder="Cedula" value="{{Auth::user()->cedula}}">
-            </div>
+            <input type="text" class="bloqueGris" style="top: 490px;" name="email" placeholder="Correo Eletronico" value="{{Auth::user()->email}}">
 
-            <div class="bloqueGris" style="top: 630px;">
-                <input type="text" class="bloqueGris" name="licencia" placeholder="Licencia" value="{{Auth::user()->licencia}}">
-            </div>
+            <input type="text" class="bloqueGris" style="top: 558px;"name="cedula" placeholder="Cedula" value="{{Auth::user()->cedula}}">
 
-            <div class="bloqueGris" style="top: 702px;" >
-                <input type="text" class="bloqueGris" name="telefono" placeholder="Telefono" value="{{Auth::user()->telefono}}">
-            </div>
+             <input type="text" class="bloqueGris" style="top: 630px;"name="licencia" placeholder="Licencia" value="{{Auth::user()->licencia}}">
 
-            <button type="submit" value="submit">Actualiza </button>
+             <input type="text" class="bloqueGris" style="top: 702px;" name="telefono" placeholder="Telefono" value="{{Auth::user()->telefono}}">
+
+            <button type="submit" value="submit" style="
+position: absolute;
+width: 156px;
+height: 56px;
+left: 950px;
+top: 190px;
+
+background: #FFEF3E;
+border-radius: 5px;">Actualizar datos </button>
 
         </form>
     </div>

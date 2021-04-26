@@ -53,7 +53,7 @@
         Edita tu perfil
     </a>
     <div id="rectanguloPerfil">
-        <div id="textoPerfil">Perfil</div>
+        <div id="textoPerfil">Informacion Personal</div>
     </div>
 
     <div class="bloqueGris"  >
