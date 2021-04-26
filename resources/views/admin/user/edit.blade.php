@@ -49,7 +49,7 @@
 </head>
 <!--CUERPO DEL PERFIL-->
 <body>
-    <img src="images/fotocliente.png" style="position: absolute;
+    <img src="{{asset('images/fotocliente.png')}}" style="position: absolute;
         width: 80px;
         height: 80px;
         left: 240px;
