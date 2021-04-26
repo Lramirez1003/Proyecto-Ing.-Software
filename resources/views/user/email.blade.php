@@ -95,8 +95,8 @@
 <!-- Customise the Thankyou Message People See when they submit the form: -->
 <div style="display:none;" id="thankyou_message">
     <h2>
-        <em>Thanks</em> for contacting us!
-        We will get back to you soon!
+        <em>Gracias</em> por contactarnos!
+        Te responderemos pronto!
     </h2>
 </div>
 
