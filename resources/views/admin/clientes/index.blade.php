@@ -93,7 +93,7 @@ top: 0px;">Agregar cliente</h4>
 
         <div class="group">
 
-            <input class="inputTexto" type="email" name="Email" required> <span class="highlight"></span><span class="bar"></span>
+            <input class="inputTexto" type="email" name="Email"> <span class="highlight"></span><span class="bar"></span>
             <label class="labelTexto">Correo:</label>
 
         </div>

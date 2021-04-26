@@ -103,6 +103,7 @@ top: 10px;">Agregar renta</h4>
       <th data-tsorter="numeric" style="border:1px solid #ffdd0098;background: #ffdd0081;"> Precio Total</th>
       <th data-tsorter="input-text" style="border:1px solid #ffdd0098;background: #ffdd0081;">Fecha de salida</th>
       <th data-tsorter="input-text" style="border:1px solid #ffdd0098;background: #ffdd0081;">Fecha de entrada</th>
+      <th data-tsorter="input-text" style="border:1px solid #ffdd0098;background: #ffdd0081;">Codigo de renta</th>
 
 
     </tr>
@@ -116,6 +117,7 @@ top: 10px;">Agregar renta</h4>
       <td style="border:1px solid #ffdd0098;">{{$renta->precio_total ?? ''}}</td>
       <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
       <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
+      <td style="border:1px solid #ffdd0098;">{{$renta->Codigo_de_renta ?? ''}}</td>
       <td style="border:1px solid #ffdd0098;">
         <form action="{{route('rentaC.delete',$renta)}}" method="post">
             @method('delete')

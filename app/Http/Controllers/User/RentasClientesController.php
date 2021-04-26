@@ -81,6 +81,7 @@ class RentasClientesController extends Controller
         $renta->fecha_fin= $request->input('fecha_fin');
         vehiculos::where('id',$renta->vehiculo)->increment('veces_rentado');
         vehiculos::where('id',$renta->vehiculo)->update(['estado' => false]);
+        $renta->codigo_de_renta = substr(str_shuffle("0123456789AaBbCcDdEeFfGgHhIiJjLkLlMmNnOoPpQqRrSsTtVvWwXxYyZz"), 0, 6);
         $renta->save();
 
                 // email data
@@ -91,6 +92,7 @@ class RentasClientesController extends Controller
                     'prec'=> RentaCliente::where('precio_total',$renta->precio_total)->pluck('precio_total')->first(),
                     'fechasalida'=> RentaCliente::where('fecha_inicio',$renta->fecha_inicio)->pluck('fecha_inicio')->first(),
                     'fechaentrega'=> RentaCliente::where('fecha_fin',$renta->fecha_fin)->pluck('fecha_fin')->first(),
+                    'codigoderenta'=>RentaCliente::where('codigo_de_renta',$renta->codigo_de_renta)->pluck('codigo_de_renta')->first(),
                 );
         
                 // send email with the template

@@ -127,6 +127,7 @@ top: 10px;">Agregar renta</h4>
       <th data-tsorter="numeric" > Precio Total</th>
       <th data-tsorter="input-text">Fecha de salida</th>
       <th data-tsorter="input-text">Fecha de entrada</th>
+      <th data-tsorter="input-text">Codigo de renta</th>
 
 
     </tr>
@@ -141,6 +142,7 @@ top: 10px;">Agregar renta</h4>
       <td>{{$rentaC->precio_total ?? ''}}</td>
       <td>{{\Carbon\Carbon::parse($rentaC->fecha_inicio)->format('d-m-Y')}}</td>
       <td>{{\Carbon\Carbon::parse($rentaC->fecha_fin)->format('d-m-Y')}}</td>
+      <td>{{$rentaC->Codigo_de_renta ?? ''}}</td>
       <td>
         <a href="{{route('rentaC.edit',$rentaC->id)}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
         <form action="{{route('rentaC.delete',$rentaC->id)}}" method="post">
