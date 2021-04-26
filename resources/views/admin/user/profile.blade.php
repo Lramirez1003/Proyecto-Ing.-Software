@@ -42,7 +42,11 @@
 </head>
 <!--CUERPO DEL PERFIL-->
 <body>
-    <div class="circuloPerfil"><img src="images/fotoPerfil.png" alt=""></div>
+    <img src="images/fotocliente.png" style="position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 240px;
+    top: 170px;">
     <h3 id="hola"> <nobr> {{ Auth::user()->name }}</h3>
     <p id="parrafito">Aqui encontrarás tu informacion personal </p>
     <a href="{{route('Ajustes.edit',Auth::user()->id)}}" id="bloqueDorado" >
