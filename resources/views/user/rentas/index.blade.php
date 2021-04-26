@@ -117,7 +117,7 @@ top: 10px;">Agregar renta</h4>
       <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_inicio)->format('d-m-Y')}}</td>
       <td style="border:1px solid #ffdd0098;">{{\Carbon\Carbon::parse($renta->fecha_fin)->format('d-m-Y')}}</td>
       <td style="border:1px solid #ffdd0098;">
-        <form action="{{route('rentaC.delete',$renta->id)}}" method="post">
+        <form action="{{route('rentaC.delete',$renta)}}" method="post">
             @method('delete')
             @csrf
             <button type="submit" class="btn-borrar" >Eliminar</button>

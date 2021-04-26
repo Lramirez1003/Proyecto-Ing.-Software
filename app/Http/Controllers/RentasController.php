@@ -68,11 +68,14 @@ class RentasController extends Controller
 
         $renta= new Renta();
         $renta->cliente= $request->input('cliente_id');
-        $renta->vehiculo= $request->input('vehiculo_id');
-        $renta->precio_total=$request->input('precio_total');
+        $renta->vehiculo= $request->input('vehiculo_id'); 
+        $renta->total_de_dias=$request->input('total_de_dias');
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
+        $renta->precio_total= $renta->total_de_dias * vehiculos::where('id',$renta->vehiculo)->pluck('precio')->first();
 
+        vehiculos::where('id',$renta->vehiculo)->increment('veces_rentado');
+        vehiculos::where('id',$renta->vehiculo)->update(['estado' => false]);
         $renta->save();
 
 
@@ -137,7 +140,8 @@ class RentasController extends Controller
         //$renta = Renta::find($id);
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
-        $renta->precio_total=$request->input('precio_total');
+       // $renta->precio_total=$request->input('precio_total');
+        $renta->total_de_dias=$request->input('total_de_dias');
         $renta->save();
 
         return redirect()->route('rentas.index');
@@ -149,9 +153,10 @@ class RentasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Renta $renta)
     {
-        Renta::destroy($id);
+        $renta->vehiculo->update(['estado' => true]);
+        $renta->delete();
 
         return back();
     }

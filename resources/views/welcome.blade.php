@@ -21,7 +21,7 @@
       <a href="#" class = "logo " ><img src="images/LogoComp80.png" alt="Logo"></a>
       <button class="nav-button"onclick="accion()" >Menú</button>
       <a href="{{route('rentaC.create')}}" class = "nav-menu ">Rentar</a>
-      <a href="{{asset('about.html')}}" class = "nav-menu ">Nosotros</a>
+      <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
       @if (Route::has('login'))
       @auth

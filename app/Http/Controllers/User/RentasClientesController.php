@@ -71,7 +71,7 @@ class RentasClientesController extends Controller
     {
        #opcion 1
 
-        $renta= new RentaCliente();
+        $renta = new RentaCliente();
         $renta->user= $request->input('user_id');
         $renta->vehiculo= $request->input('vehiculo_id');
         
@@ -79,7 +79,8 @@ class RentasClientesController extends Controller
         $renta->precio_total= $renta->total_de_dias * vehiculos::where('id',$renta->vehiculo)->pluck('precio')->first();
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
-
+        vehiculos::where('id',$renta->vehiculo)->increment('veces_rentado');
+        vehiculos::where('id',$renta->vehiculo)->update(['estado' => false]);
         $renta->save();
 
                 // email data
@@ -88,14 +89,15 @@ class RentasClientesController extends Controller
                     'email' => Auth::user()->email,
                     'rent'=> vehiculos::where('id',$renta->vehiculo)->pluck('Nombre')->first(),
                     'prec'=> RentaCliente::where('precio_total',$renta->precio_total)->pluck('precio_total')->first(),
-
+                    'fechasalida'=> RentaCliente::where('fecha_inicio',$renta->fecha_inicio)->pluck('fecha_inicio')->first(),
+                    'fechaentrega'=> RentaCliente::where('fecha_fin',$renta->fecha_fin)->pluck('fecha_fin')->first(),
                 );
         
                 // send email with the template
                 Mail::send('renta_mail', $email_data, function ($message) use ($email_data) {
                     $message->to($email_data['email'], $email_data['name'])
-                        ->subject('Welcome to My PP')
-                        ->from('totosuave15@hotmail.com', 'Chica culo');
+                        ->subject('Gracias por tu renta!')
+                        ->from('urenarentcar@gmail.com', 'Victor Ureña');
                 });
 
         
@@ -144,7 +146,7 @@ class RentasClientesController extends Controller
     {
         $renta->fecha_inicio= $request->input('fecha_inicio');
         $renta->fecha_fin= $request->input('fecha_fin');
-        $renta->precio_total=$request->input('precio_total');
+        //$renta->precio_total=$request->input('precio_total');
         $renta->total_de_dias=$request->input('total_de_dias');
         $renta->save();
 
@@ -157,9 +159,10 @@ class RentasClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(RentaCliente $renta)
     {
-        RentaCliente::destroy($id);
+        $renta->vehiculo->update(['estado' => true]);
+        $renta->delete();
 
         return back();
     }

@@ -110,9 +110,12 @@ top: 0px;">Agregar renta</h4>
                 <option value="0">Selecciona el vehiculo</option>
                 
                 
-                    @foreach ($vehiculos as $vehiculo)
-                    <option value="{{$vehiculo->id}}">{{$vehiculo->Nombre}}</option>
-                    @endforeach
+                @foreach ($vehiculos as $vehiculo)
+                @if ($vehiculo->estado == True)
+                <option value="{{$vehiculo->id}}">{{$vehiculo->Nombre}}</option> 
+                @endif
+                
+                @endforeach
 
                
             </select>
@@ -131,11 +134,10 @@ top: 0px;">Agregar renta</h4>
         </div>
 
         <div class="group">
-            <input class="inputTexto" type="text" name="precio_total" required><span class="highlight"></span><span class="bar"></span>
-            <label class="labelTexto">Precio total:</label>
+            <input class="inputTexto" type="text" name="total_de_dias" required><span class="highlight"></span><span class="bar"></span>
+            <label class="labelTexto">Total de dias:</label>
         </div>
-
-         
+ 
          <a href="{{ url()->previous() }}"  class="button" style="color: orange;border: 2px solid;
          border-radius: 5px; text-decoration: none; ">Cancelar
             <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>

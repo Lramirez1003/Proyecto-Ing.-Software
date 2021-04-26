@@ -108,7 +108,10 @@ top: 0px;">Agregar renta</h4>
                 
                 
                     @foreach ($vehiculos as $vehiculo)
-                    <option value="{{$vehiculo->id}}">{{$vehiculo->Nombre}}</option>
+                    @if ($vehiculo->estado == True)
+                    <option value="{{$vehiculo->id}}">{{$vehiculo->Nombre}}</option> 
+                    @endif
+                    
                     @endforeach
 
                

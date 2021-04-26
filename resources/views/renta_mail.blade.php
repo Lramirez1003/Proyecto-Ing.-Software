@@ -1,6 +1,11 @@
-Hello {{ $name }},<br><br>
+Hola {{ $name }}!,<br><br>
 
 Rentaste {{$rent}}.<br><br>
-El precio es {{$prec}}.<br><br>
-Thank You,<br>
-MyNotepaper
+
+El precio total es {{$prec}}.<br><br>
+
+Con fecha de salida {{$fechasalida}}, hasta el {{$fechaentrega}}<br><br>
+
+Gracias por tu renta,<br>
+
+Victor Ureña

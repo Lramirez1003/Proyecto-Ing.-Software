@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/admiVehiculo.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/admiVehiculo copy.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript"src='{{ asset('js/adminVehiculos.js') }}'></script>
     <script type="text/javascript"src='{{ asset('js/tsorter.js') }}'></script>
@@ -177,6 +177,11 @@ top: 0px;">Agregar Vehiculos</h4>
           <p>Tipo: {{$vehiculo->Tipo ?? ''}}</p>
           <p>Precio: {{$vehiculo->Precio ?? ''}}</p>
           <p># pasajeros: {{$vehiculo->N_pasajeros ?? ''}}</p>
+          @if ($vehiculo->estado == True)
+            <p>Estado: Disponible</p>
+            @else
+            <p>Estado: Ocupado</p>
+            @endif
           <a href="{{route('vehiculos.edit',["vehiculo"=>$vehiculo])}}" class = "btn-editar " id="Edtar-btn"> Editar </a> <br><br>
           <form action="{{route('vehiculos.delete',["vehiculo"=>$vehiculo])}}" method="post">
           @method('delete')

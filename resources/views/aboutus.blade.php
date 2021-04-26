@@ -23,18 +23,26 @@
     <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/About.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style copy.css')}}">
   </head>
   <body>
 
   <header>
   <nav>
       <a href="{{route('welcome.index')}}"  style="position: absolute; left: 20px;"><img src="{{ asset('images/LogoComp80.png') }}" alt="Logo"></a>
-      <a href="#" class = "nav-menu ">Rentar</a>
+      <a href="{{route('rentaC.create')}}" class = "nav-menu ">Rentar</a>
       <a href="{{route('AboutUs.index')}}" class = "nav-menu ">Nosotros</a>
       <a href="{{route('Learn.index')}}" class = "nav-menu ">Aprender</a>
-      <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
-      <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+      @if (Route::has('login'))
+      @auth
+      @else
+        <a href="{{route('login')}}" class = "nav-iniciarsesion ">Inicia Sesión</a>
+      @if (Route::has('register'))
+        <a href="{{route('register')}}" class = "nav-registro">Regístrate</a>
+      @endif
+
+      @endauth
+      @endif
   </nav>
 
 </header>
@@ -117,7 +125,7 @@
   <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
   <script src="{{asset('js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{asset('js/aos.js')}}js/aos.js"></script>
+  <script src="{{asset('js/aos.js')}}"></script>
   <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
   <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
   <script src="{{asset('js/jquery.timepicker.min.js')}}"></script>

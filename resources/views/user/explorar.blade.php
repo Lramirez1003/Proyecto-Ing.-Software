@@ -130,10 +130,20 @@ height: 219px;">
     
     <p class="tipoCarro"> Tipo: {{$vehiculo->Tipo ?? ''}}</p>
     
-    <p>Numero de pasajeros: {{$vehiculo->N_pasajeros ?? ''}}</p>
+    <p>Número de pasajeros: {{$vehiculo->N_pasajeros ?? ''}}</p>
+
+
+    <p>Veces rentado: {{$vehiculo->veces_rentado ?? ''}}   </p>
 
 	<p>Precio: RD$ {{$vehiculo->Precio ?? ''}} por dia</p>
 
+    @if ($vehiculo->estado == True)
+    <p>Estado: Disponible</p>
+    @else
+    <p>Estado: Ocupado</p>
+    @endif
+    
+    
     <a href="{{route('rentasC.index')}}" class="forma-boton-amarillo">
         <div class="seleccionar-titulo">Seleccionar</div>
     </a>
