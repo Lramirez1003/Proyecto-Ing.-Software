@@ -144,7 +144,7 @@ height: 219px;">
     @endif
     
     
-    <a href="{{route('rentasC.index')}}" class="forma-boton-amarillo">
+    <a href="{{route('rentaC.create')}}" class="forma-boton-amarillo">
         <div class="seleccionar-titulo">Seleccionar</div>
     </a>
 </div>

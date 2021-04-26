@@ -15,7 +15,7 @@
             <!--<i class="material-icons">person</i>-->
             <img src="images/exploraricon.png" width="15px" height="14px">
         </a>
-        <a href="{{route('rentaC.create')}}" class = "administrarv " >Rentar
+        <a href="{{route('rentasC.index')}}" class = "administrarv " >Rentar
             <!--<i class="material-icons">person</i>-->
             <img src="images/iconocar.png" width="11.45px" height="14px">
         </a>
@@ -52,7 +52,7 @@
 
     <h1 id="hola">Hola<nobr> {{ Auth::user()->name }}! </h1>
     <p id="parrafito">Haz una reserva, comunicate con el dueño o chequea como está tu perfil </p>
-    <a href="{{route('rentaC.create')}}" class="rectangulogris">
+    <a href="{{route('rentasC.index')}}" class="rectangulogris">
         <div id="titulo1">
             Haz una reserva ahora!
         </div>
