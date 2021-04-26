@@ -56,7 +56,7 @@
     top: 170px;">
     <h3 id="hola"> <nobr> {{ Auth::user()->name }}</h3>
     <p id="parrafito">Aqui encontrarás tu informacion personal </p>
-    <a href="{{route('Ajustes.edit',Auth::user()->id)}}" id="bloqueDorado" style="text-align: center; ;text-decoration:none" >
+    <a href="{{route('Ajustes.edit',Auth::user()->id)}}" id="bloqueDorado" style="text-align: center; color:black ;text-decoration:none" >
         <b>Edita tu perfil</b> 
     </a>
     <div id="rectanguloPerfil">
